@@ -1,0 +1,929 @@
+<!DOCTYPE html>
+                        <html>
+
+                        <head>
+                            <meta charset="utf-8">
+                            <meta name="viewport" content="width=device-width">
+                            <title>MathJax example</title>
+                            <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+                            <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+                            </script>
+                        <style>
+                        body {
+    font-family: Garamond, serif;
+    }
+                        table, th, td {border: 1px solid;}
+
+                        .container img {
+                        position:absolute;
+                        right:0;
+                        top:0;
+                        }
+                        .container .table-div  {
+                        position:relative; 
+                        padding-right:'images-width';
+                        }
+                        </style>
+                        </head>
+
+                        <body>
+                     <div class="container">
+                            <div class="table-div"> <table  id= "Column_W14X90_W12X170" ><tr><td><h4>Choose Section</h4><p style='font-size:10px;'>
+\begin{aligned}
+F_{s} &= \frac{ 5 }{ 3 } &= 1.667  
+\\[10pt]
+F_{a} &= \left( 1 - 0 \right) \cdot \left( \frac{ F_{y} }{ F_{s} } \right)  = \left( 1 - 0 \right) \cdot \left( \frac{ 248.000\ \mathrm{MPa} }{ 1.667 } \right) &= 148.800\ \mathrm{MPa}  
+\\[10pt]
+F_{a_{}} &= 0.8 \cdot F_{a}  = 0.8 \cdot 148.800\ \mathrm{MPa} &= 119.040\ \mathrm{MPa}  
+\\[10pt]
+f_{a} &= F_{a_{}} \cdot 0.5  = 119.040\ \mathrm{MPa} \cdot 0.5 &= 59.520\ \mathrm{MPa}  
+\\[10pt]
+\mathrm{Area}_{req} &= \frac{ p }{ f_{a} }  = \frac{ 499.000\ \mathrm{kN} }{ 59.520\ \mathrm{MPa} } &= 8383.737\ \mathrm{mm}^{2}  
+\\[10pt]
+F_{b} &= 0.6 \cdot F_{y}  = 0.6 \cdot 248.000\ \mathrm{MPa} &= 148.800\ \mathrm{MPa}  
+\\[10pt]
+f_{b} &= F_{b} \cdot 0.8  = 148.800\ \mathrm{MPa} \cdot 0.8 &= 119.040\ \mathrm{MPa}  
+\\[10pt]
+\mathrm{Sx}_{req} &= \frac{ m_{x} }{ f_{b} }  = \frac{ 307.510\ \mathrm{kN} \cdot \mathrm{m} }{ 119.040\ \mathrm{MPa} } &= 2583249.328\ \mathrm{mm}^{3}  
+\end{aligned}
+
+\begin{aligned}
+\mathrm{name} &= \mathrm{W12X170} \; 
+ &A &= 32300.000\ \mathrm{mm}^{2} \; 
+ &d &= 356.000\ \mathrm{mm} \; 
+\\[10pt]
+ b_{f} &= 320.000\ \mathrm{mm} \; 
+ &t_{f} &= 39.600\ \mathrm{mm} \; 
+ &t_{w} &= 24.400\ \mathrm{mm} \; 
+\\[10pt]
+ S_{x} &= 3850000.000\ \mathrm{mm}^{3} \; 
+ &S_{y} &= 1350000.000\ \mathrm{mm}^{3} \; 
+ &I_{x} &= 687000000.000\ \mathrm{mm}^{4} \; 
+\\[10pt]
+ I_{y} &= 215000000.000\ \mathrm{mm}^{4} \; 
+ &r_{x} &= 146.000\ \mathrm{mm} \; 
+ &r_{y} &= 81.800\ \mathrm{mm} \; 
+\\[10pt]
+ m_{u} &= 307.510\ \mathrm{kN} \cdot \mathrm{m} \; 
+ &f_{y} &= 248.000\ \mathrm{MPa} \; 
+ &\mathrm{axial} &= 499.000\ \mathrm{kN} \; 
+\\[10pt]
+\end{aligned}
+</p></td><td><h4>Check Slenderness</h4><p style='font-size:10px;'>
+\begin{aligned}
+\mathrm{col}_{section} &= \mathrm{W12X170} \; 
+\\[10pt]
+\mathrm{beam}_{section} &= \mathrm{W14X90} \; 
+\\[10pt]
+\mathrm{column}_{1} &= \frac{ I_{x} }{ 4000 \cdot \mathrm{mm} }  = \frac{ 687000000.000\ \mathrm{mm}^{4} }{ 4000 \cdot mm } &= 171750.000\ \mathrm{mm}^{3}  
+\\[10pt]
+\mathrm{column}_{2} &= \frac{ I_{x} }{ 3000 \cdot \mathrm{mm} }  = \frac{ 687000000.000\ \mathrm{mm}^{4} }{ 3000 \cdot mm } &= 229000.000\ \mathrm{mm}^{3}  
+\\[10pt]
+\mathrm{beam}_{1} &= \frac{ \mathrm{Ix}_{beam} }{ 7000 \cdot \mathrm{mm} }  = \frac{ 416000000.000\ \mathrm{mm}^{4} }{ 7000 \cdot mm } &= 59428.571\ \mathrm{mm}^{3}  
+\\[10pt]
+\mathrm{beam}_{2} &= \frac{ \mathrm{Ix}_{beam} }{ 6000 \cdot \mathrm{mm} }  = \frac{ 416000000.000\ \mathrm{mm}^{4} }{ 6000 \cdot mm } &= 69333.333\ \mathrm{mm}^{3}  
+\\[10pt]
+G_{d} &= \frac{ \mathrm{column}_{1} + \mathrm{column}_{2} }{ \mathrm{beam}_{1} + \mathrm{beam}_{2} }  = \frac{ 171750.000\ \mathrm{mm}^{3} + 229000.000\ \mathrm{mm}^{3} }{ 59428.571\ \mathrm{mm}^{3} + 69333.333\ \mathrm{mm}^{3} } &= 3.112  
+\\[10pt]
+G_{a} &= 1.000 \; \;\textrm{(Fixed)}
+\end{aligned}
+
+\begin{aligned}
+k &= 1.550 \; \;\textrm{(From Alignment Chart)}
+\\[10pt]
+x &= \left( \frac{ \left( G_{d} \cdot G_{a} \cdot \left( \frac{ \pi }{ k } \right) ^{ 2 } \right) - 36 }{ 6 \cdot \left( G_{d} + G_{a} \right) } - \left( \frac{ \frac{ \pi }{ k } }{ \tan \left( \frac{ \pi }{ k } \right) } \right) \right)  = \left( \frac{ \left( 3.112 \cdot 1.000 \cdot \left( \frac{ 3.142 }{ 1.550 } \right) ^{ 2 } \right) - 36 }{ 6 \cdot \left( 3.112 + 1.000 \right) } - \left( \frac{ \frac{ 3.142 }{ 1.550 } }{ \tan \left( \frac{ 3.142 }{ 1.550 } \right) } \right) \right) &= 0.053  
+\end{aligned}
+
+\begin{aligned}
+\mathrm{SR} &= \operatorname{max} { \left( \frac{ k \cdot l }{ r_{x} } ,\  k \cdot l \cdot \frac{1} { r_{y} } \right) }  = \operatorname{max} { \left( \frac{ 1.550 \cdot 4.000\ \mathrm{m} }{ 146.000\ \mathrm{mm} } ,\  1.550 \cdot 4.000\ \mathrm{m} \cdot \frac{1} { 81.800\ \mathrm{mm} } \right) } &= 75.795  
+\\[10pt]
+C_{c} &= \sqrt { \frac{ 2 \cdot \left( \pi \right) ^{ 2 } \cdot 200000 \cdot \mathrm{MPa} }{ f_{y} } }  = \sqrt { \frac{ 2 \cdot \left( 3.142 \right) ^{ 2 } \cdot 200000 \cdot MPa }{ 248.000\ \mathrm{MPa} } } &= 126.169  
+\\[10pt]
+&\text{Since, } \mathrm{SR} \lt C_{c} \rightarrow \left( 75.795 \lt 126.169 \right) :   \\[10pt]
+\mathrm{Column} &= \mathrm{Short} \; 
+\end{aligned}
+</p></td><td><h4>Stability and Strength Check</h4><p style='font-size:10px;'>
+\begin{aligned}
+F_{s} &= \frac{ 5 }{ 3 } + \left( 3 \cdot \frac{ \mathrm{SR} }{ 8 \cdot C_{c} } \right) - \frac{ \left( \mathrm{SR} \right) ^{ 3 } }{ 8 \cdot \left( C_{c} \right) ^{ 3 } }  = \frac{ 5 }{ 3 } + \left( 3 \cdot \frac{ 75.795 }{ 8 \cdot 126.169 } \right) - \frac{ \left( 75.795 \right) ^{ 3 } }{ 8 \cdot \left( 126.169 \right) ^{ 3 } } &= 1.865  
+\\[10pt]
+F_{a} &= \left( 1 - \frac{ \left( \mathrm{SR} \right) ^{ 2 } }{ \left( 2 \cdot C_{c} \right) ^{ 2 } } \right) \cdot \left( \frac{ f_{y} }{ F_{s} } \right)  = \left( 1 - \frac{ \left( 75.795 \right) ^{ 2 } }{ \left( 2 \cdot 126.169 \right) ^{ 2 } } \right) \cdot \left( \frac{ 248.000\ \mathrm{MPa} }{ 1.865 } \right) &= 120.989\ \mathrm{MPa}  
+\\[10pt]
+f_{a} &= \frac{ \mathrm{axial} }{ A }  = \frac{ 499.000\ \mathrm{kN} }{ 32300.000\ \mathrm{mm}^{2} } &= 15.449\ \mathrm{MPa}  
+\\[10pt]
+\mathrm{Fe}_{x} &= \frac{ 12 \cdot \left( \pi \right) ^{ 2 } \cdot E_{s} }{ 23 \cdot \left( \mathrm{SR} \right) ^{ 2 } }  = \frac{ 12 \cdot \left( 3.142 \right) ^{ 2 } \cdot 200.000\ \mathrm{GPa} }{ 23 \cdot \left( 75.795 \right) ^{ 2 } } &= 179.269\ \mathrm{MPa}  
+\\[10pt]
+\mathrm{Magnification}_{factor} &= \frac{ \mathrm{Cm} }{ 1 - \left( \frac{ f_{a} }{ \mathrm{Fe}_{x} } \right) }  = \frac{ 0.850 }{ 1 - \left( \frac{ 15.449\ \mathrm{MPa} }{ 179.269\ \mathrm{MPa} } \right) } &= 0.930  
+\\[10pt]
+&\text{Since, } \mathrm{Magnification}_{factor} \lt 1 \rightarrow \left( 0.930 \lt 1 \right) :   \\[10pt]
+\mathrm{Magnification}_{factor} &= 0.930 \; 
+\\[10pt]
+f_{bx} &= \frac{ m_{x} }{ S_{x} }  = \frac{ 307.510\ \mathrm{kN} \cdot \mathrm{m} }{ 3850000.000\ \mathrm{mm}^{3} } &= 79.873\ \mathrm{MPa}  
+\\[10pt]
+l_{c} &= \operatorname{min} { \left( \frac{ 200 \cdot b_{f} }{ \sqrt { \mathrm{fy} } } ,\  137900 \cdot \frac{1} { \frac{ \mathrm{fy} \cdot d }{ b_{f} \cdot t_{f} } } \right) }  = \operatorname{min} { \left( \frac{ 200 \cdot 320.000\ \mathrm{mm} }{ \sqrt { 248 } } ,\  137900 \cdot \frac{1} { \frac{ 248 \cdot 356.000\ \mathrm{mm} }{ 320.000\ \mathrm{mm} \cdot 39.600\ \mathrm{mm} } } \right) } &= 4.064\ \mathrm{m}  
+\\[10pt]
+l_{u} &= \operatorname{max} { \left( \frac{ 200 \cdot b_{f} }{ \sqrt { \mathrm{fy} } } ,\  137900 \cdot \frac{1} { \frac{ \mathrm{fy} \cdot d }{ b_{f} \cdot t_{f} } } \right) }  = \operatorname{max} { \left( \frac{ 200 \cdot 320.000\ \mathrm{mm} }{ \sqrt { 248 } } ,\  137900 \cdot \frac{1} { \frac{ 248 \cdot 356.000\ \mathrm{mm} }{ 320.000\ \mathrm{mm} \cdot 39.600\ \mathrm{mm} } } \right) } &= 19.793\ \mathrm{m}  
+\\[10pt]
+&\text{Since, } l_{b} \lt l_{c} \rightarrow \left( 4.000\ \mathrm{m} \lt 4.064\ \mathrm{m} \right) :   \\[10pt]
+\mathrm{case} &= 1 \; 
+\\[10pt]
+F_{bx} &= 0.66 \cdot f_{y}  = 0.66 \cdot 248.000\ \mathrm{MPa} &= 163.680\ \mathrm{MPa}  
+\\[10pt]
+\mathrm{Stability} &= \frac{ f_{a} }{ F_{a} } + \mathrm{Magnification}_{factor} \cdot \left( \frac{ f_{bx} }{ F_{bx} } \right)  = \frac{ 15.449\ \mathrm{MPa} }{ 120.989\ \mathrm{MPa} } + 0.930 \cdot \left( \frac{ 79.873\ \mathrm{MPa} }{ 163.680\ \mathrm{MPa} } \right) &= 0.582  
+\\[10pt]
+&\text{Since, } \mathrm{Stability} \lt 1 \rightarrow \left( 0.582 \lt 1 \right) :   \\[10pt]
+\mathrm{Column} &= \mathrm{Safe} \; 
+\\[10pt]
+\mathrm{Strenght} &= \left( \frac{ f_{a} }{ 0.60 \cdot f_{y} } \right) + \left( \frac{ f_{bx} }{ F_{bx} } \right)  = \left( \frac{ 15.449\ \mathrm{MPa} }{ 0.60 \cdot 248.000\ \mathrm{MPa} } \right) + \left( \frac{ 79.873\ \mathrm{MPa} }{ 163.680\ \mathrm{MPa} } \right) &= 0.592  
+\\[10pt]
+&\text{Since, } \mathrm{Strenght} \lt 1 \rightarrow \left( 0.592 \lt 1 \right) :   \\[10pt]
+\mathrm{Column} &= \mathrm{Safe} \; 
+\end{aligned}
+</p></td></tr><tr></tr><tr></tr></table></div>
+                            </div> <div class="container">
+                            <div class="table-div"> <table  id= "Column_W14X90_W12X190" ><tr><td><h4>Choose Section</h4><p style='font-size:10px;'>
+\begin{aligned}
+F_{s} &= \frac{ 5 }{ 3 } &= 1.667  
+\\[10pt]
+F_{a} &= \left( 1 - 0 \right) \cdot \left( \frac{ F_{y} }{ F_{s} } \right)  = \left( 1 - 0 \right) \cdot \left( \frac{ 248.000\ \mathrm{MPa} }{ 1.667 } \right) &= 148.800\ \mathrm{MPa}  
+\\[10pt]
+F_{a_{}} &= 0.8 \cdot F_{a}  = 0.8 \cdot 148.800\ \mathrm{MPa} &= 119.040\ \mathrm{MPa}  
+\\[10pt]
+f_{a} &= F_{a_{}} \cdot 0.5  = 119.040\ \mathrm{MPa} \cdot 0.5 &= 59.520\ \mathrm{MPa}  
+\\[10pt]
+\mathrm{Area}_{req} &= \frac{ p }{ f_{a} }  = \frac{ 499.000\ \mathrm{kN} }{ 59.520\ \mathrm{MPa} } &= 8383.737\ \mathrm{mm}^{2}  
+\\[10pt]
+F_{b} &= 0.6 \cdot F_{y}  = 0.6 \cdot 248.000\ \mathrm{MPa} &= 148.800\ \mathrm{MPa}  
+\\[10pt]
+f_{b} &= F_{b} \cdot 0.8  = 148.800\ \mathrm{MPa} \cdot 0.8 &= 119.040\ \mathrm{MPa}  
+\\[10pt]
+\mathrm{Sx}_{req} &= \frac{ m_{x} }{ f_{b} }  = \frac{ 307.510\ \mathrm{kN} \cdot \mathrm{m} }{ 119.040\ \mathrm{MPa} } &= 2583249.328\ \mathrm{mm}^{3}  
+\end{aligned}
+
+\begin{aligned}
+\mathrm{name} &= \mathrm{W12X190} \; 
+ &A &= 36100.000\ \mathrm{mm}^{2} \; 
+ &d &= 366.000\ \mathrm{mm} \; 
+\\[10pt]
+ b_{f} &= 323.000\ \mathrm{mm} \; 
+ &t_{f} &= 44.200\ \mathrm{mm} \; 
+ &t_{w} &= 26.900\ \mathrm{mm} \; 
+\\[10pt]
+ S_{x} &= 4310000.000\ \mathrm{mm}^{3} \; 
+ &S_{y} &= 1520000.000\ \mathrm{mm}^{3} \; 
+ &I_{x} &= 787000000.000\ \mathrm{mm}^{4} \; 
+\\[10pt]
+ I_{y} &= 245000000.000\ \mathrm{mm}^{4} \; 
+ &r_{x} &= 148.000\ \mathrm{mm} \; 
+ &r_{y} &= 82.600\ \mathrm{mm} \; 
+\\[10pt]
+ m_{u} &= 307.510\ \mathrm{kN} \cdot \mathrm{m} \; 
+ &f_{y} &= 248.000\ \mathrm{MPa} \; 
+ &\mathrm{axial} &= 499.000\ \mathrm{kN} \; 
+\\[10pt]
+\end{aligned}
+</p></td><td><h4>Check Slenderness</h4><p style='font-size:10px;'>
+\begin{aligned}
+\mathrm{col}_{section} &= \mathrm{W12X190} \; 
+\\[10pt]
+\mathrm{beam}_{section} &= \mathrm{W14X90} \; 
+\\[10pt]
+\mathrm{column}_{1} &= \frac{ I_{x} }{ 4000 \cdot \mathrm{mm} }  = \frac{ 787000000.000\ \mathrm{mm}^{4} }{ 4000 \cdot mm } &= 196750.000\ \mathrm{mm}^{3}  
+\\[10pt]
+\mathrm{column}_{2} &= \frac{ I_{x} }{ 3000 \cdot \mathrm{mm} }  = \frac{ 787000000.000\ \mathrm{mm}^{4} }{ 3000 \cdot mm } &= 262333.333\ \mathrm{mm}^{3}  
+\\[10pt]
+\mathrm{beam}_{1} &= \frac{ \mathrm{Ix}_{beam} }{ 7000 \cdot \mathrm{mm} }  = \frac{ 416000000.000\ \mathrm{mm}^{4} }{ 7000 \cdot mm } &= 59428.571\ \mathrm{mm}^{3}  
+\\[10pt]
+\mathrm{beam}_{2} &= \frac{ \mathrm{Ix}_{beam} }{ 6000 \cdot \mathrm{mm} }  = \frac{ 416000000.000\ \mathrm{mm}^{4} }{ 6000 \cdot mm } &= 69333.333\ \mathrm{mm}^{3}  
+\\[10pt]
+G_{d} &= \frac{ \mathrm{column}_{1} + \mathrm{column}_{2} }{ \mathrm{beam}_{1} + \mathrm{beam}_{2} }  = \frac{ 196750.000\ \mathrm{mm}^{3} + 262333.333\ \mathrm{mm}^{3} }{ 59428.571\ \mathrm{mm}^{3} + 69333.333\ \mathrm{mm}^{3} } &= 3.565  
+\\[10pt]
+G_{a} &= 1.000 \; \;\textrm{(Fixed)}
+\end{aligned}
+
+\begin{aligned}
+k &= 1.600 \; \;\textrm{(From Alignment Chart)}
+\\[10pt]
+x &= \left( \frac{ \left( G_{d} \cdot G_{a} \cdot \left( \frac{ \pi }{ k } \right) ^{ 2 } \right) - 36 }{ 6 \cdot \left( G_{d} + G_{a} \right) } - \left( \frac{ \frac{ \pi }{ k } }{ \tan \left( \frac{ \pi }{ k } \right) } \right) \right)  = \left( \frac{ \left( 3.565 \cdot 1.000 \cdot \left( \frac{ 3.142 }{ 1.600 } \right) ^{ 2 } \right) - 36 }{ 6 \cdot \left( 3.565 + 1.000 \right) } - \left( \frac{ \frac{ 3.142 }{ 1.600 } }{ \tan \left( \frac{ 3.142 }{ 1.600 } \right) } \right) \right) &= 0.001  
+\end{aligned}
+
+\begin{aligned}
+\mathrm{SR} &= \operatorname{max} { \left( \frac{ k \cdot l }{ r_{x} } ,\  k \cdot l \cdot \frac{1} { r_{y} } \right) }  = \operatorname{max} { \left( \frac{ 1.600 \cdot 4.000\ \mathrm{m} }{ 148.000\ \mathrm{mm} } ,\  1.600 \cdot 4.000\ \mathrm{m} \cdot \frac{1} { 82.600\ \mathrm{mm} } \right) } &= 77.482  
+\\[10pt]
+C_{c} &= \sqrt { \frac{ 2 \cdot \left( \pi \right) ^{ 2 } \cdot 200000 \cdot \mathrm{MPa} }{ f_{y} } }  = \sqrt { \frac{ 2 \cdot \left( 3.142 \right) ^{ 2 } \cdot 200000 \cdot MPa }{ 248.000\ \mathrm{MPa} } } &= 126.169  
+\\[10pt]
+&\text{Since, } \mathrm{SR} \lt C_{c} \rightarrow \left( 77.482 \lt 126.169 \right) :   \\[10pt]
+\mathrm{Column} &= \mathrm{Short} \; 
+\end{aligned}
+</p></td><td><h4>Stability and Strength Check</h4><p style='font-size:10px;'>
+\begin{aligned}
+F_{s} &= \frac{ 5 }{ 3 } + \left( 3 \cdot \frac{ \mathrm{SR} }{ 8 \cdot C_{c} } \right) - \frac{ \left( \mathrm{SR} \right) ^{ 3 } }{ 8 \cdot \left( C_{c} \right) ^{ 3 } }  = \frac{ 5 }{ 3 } + \left( 3 \cdot \frac{ 77.482 }{ 8 \cdot 126.169 } \right) - \frac{ \left( 77.482 \right) ^{ 3 } }{ 8 \cdot \left( 126.169 \right) ^{ 3 } } &= 1.868  
+\\[10pt]
+F_{a} &= \left( 1 - \frac{ \left( \mathrm{SR} \right) ^{ 2 } }{ \left( 2 \cdot C_{c} \right) ^{ 2 } } \right) \cdot \left( \frac{ f_{y} }{ F_{s} } \right)  = \left( 1 - \frac{ \left( 77.482 \right) ^{ 2 } }{ \left( 2 \cdot 126.169 \right) ^{ 2 } } \right) \cdot \left( \frac{ 248.000\ \mathrm{MPa} }{ 1.868 } \right) &= 120.245\ \mathrm{MPa}  
+\\[10pt]
+f_{a} &= \frac{ \mathrm{axial} }{ A }  = \frac{ 499.000\ \mathrm{kN} }{ 36100.000\ \mathrm{mm}^{2} } &= 13.823\ \mathrm{MPa}  
+\\[10pt]
+\mathrm{Fe}_{x} &= \frac{ 12 \cdot \left( \pi \right) ^{ 2 } \cdot E_{s} }{ 23 \cdot \left( \mathrm{SR} \right) ^{ 2 } }  = \frac{ 12 \cdot \left( 3.142 \right) ^{ 2 } \cdot 200.000\ \mathrm{GPa} }{ 23 \cdot \left( 77.482 \right) ^{ 2 } } &= 171.547\ \mathrm{MPa}  
+\\[10pt]
+\mathrm{Magnification}_{factor} &= \frac{ \mathrm{Cm} }{ 1 - \left( \frac{ f_{a} }{ \mathrm{Fe}_{x} } \right) }  = \frac{ 0.850 }{ 1 - \left( \frac{ 13.823\ \mathrm{MPa} }{ 171.547\ \mathrm{MPa} } \right) } &= 0.924  
+\\[10pt]
+&\text{Since, } \mathrm{Magnification}_{factor} \lt 1 \rightarrow \left( 0.924 \lt 1 \right) :   \\[10pt]
+\mathrm{Magnification}_{factor} &= 0.924 \; 
+\\[10pt]
+f_{bx} &= \frac{ m_{x} }{ S_{x} }  = \frac{ 307.510\ \mathrm{kN} \cdot \mathrm{m} }{ 4310000.000\ \mathrm{mm}^{3} } &= 71.348\ \mathrm{MPa}  
+\\[10pt]
+l_{c} &= \operatorname{min} { \left( \frac{ 200 \cdot b_{f} }{ \sqrt { \mathrm{fy} } } ,\  137900 \cdot \frac{1} { \frac{ \mathrm{fy} \cdot d }{ b_{f} \cdot t_{f} } } \right) }  = \operatorname{min} { \left( \frac{ 200 \cdot 323.000\ \mathrm{mm} }{ \sqrt { 248 } } ,\  137900 \cdot \frac{1} { \frac{ 248 \cdot 366.000\ \mathrm{mm} }{ 323.000\ \mathrm{mm} \cdot 44.200\ \mathrm{mm} } } \right) } &= 4.102\ \mathrm{m}  
+\\[10pt]
+l_{u} &= \operatorname{max} { \left( \frac{ 200 \cdot b_{f} }{ \sqrt { \mathrm{fy} } } ,\  137900 \cdot \frac{1} { \frac{ \mathrm{fy} \cdot d }{ b_{f} \cdot t_{f} } } \right) }  = \operatorname{max} { \left( \frac{ 200 \cdot 323.000\ \mathrm{mm} }{ \sqrt { 248 } } ,\  137900 \cdot \frac{1} { \frac{ 248 \cdot 366.000\ \mathrm{mm} }{ 323.000\ \mathrm{mm} \cdot 44.200\ \mathrm{mm} } } \right) } &= 21.690\ \mathrm{m}  
+\\[10pt]
+&\text{Since, } l_{b} \lt l_{c} \rightarrow \left( 4.000\ \mathrm{m} \lt 4.102\ \mathrm{m} \right) :   \\[10pt]
+\mathrm{case} &= 1 \; 
+\\[10pt]
+F_{bx} &= 0.66 \cdot f_{y}  = 0.66 \cdot 248.000\ \mathrm{MPa} &= 163.680\ \mathrm{MPa}  
+\\[10pt]
+\mathrm{Stability} &= \frac{ f_{a} }{ F_{a} } + \mathrm{Magnification}_{factor} \cdot \left( \frac{ f_{bx} }{ F_{bx} } \right)  = \frac{ 13.823\ \mathrm{MPa} }{ 120.245\ \mathrm{MPa} } + 0.924 \cdot \left( \frac{ 71.348\ \mathrm{MPa} }{ 163.680\ \mathrm{MPa} } \right) &= 0.518  
+\\[10pt]
+&\text{Since, } \mathrm{Stability} \lt 1 \rightarrow \left( 0.518 \lt 1 \right) :   \\[10pt]
+\mathrm{Column} &= \mathrm{Safe} \; 
+\\[10pt]
+\mathrm{Strenght} &= \left( \frac{ f_{a} }{ 0.60 \cdot f_{y} } \right) + \left( \frac{ f_{bx} }{ F_{bx} } \right)  = \left( \frac{ 13.823\ \mathrm{MPa} }{ 0.60 \cdot 248.000\ \mathrm{MPa} } \right) + \left( \frac{ 71.348\ \mathrm{MPa} }{ 163.680\ \mathrm{MPa} } \right) &= 0.529  
+\\[10pt]
+&\text{Since, } \mathrm{Strenght} \lt 1 \rightarrow \left( 0.529 \lt 1 \right) :   \\[10pt]
+\mathrm{Column} &= \mathrm{Safe} \; 
+\end{aligned}
+</p></td></tr><tr></tr><tr></tr></table></div>
+                            </div> <div class="container">
+                            <div class="table-div"> <table  id= "Column_W14X90_W14X120" ><tr><td><h4>Choose Section</h4><p style='font-size:10px;'>
+\begin{aligned}
+F_{s} &= \frac{ 5 }{ 3 } &= 1.667  
+\\[10pt]
+F_{a} &= \left( 1 - 0 \right) \cdot \left( \frac{ F_{y} }{ F_{s} } \right)  = \left( 1 - 0 \right) \cdot \left( \frac{ 248.000\ \mathrm{MPa} }{ 1.667 } \right) &= 148.800\ \mathrm{MPa}  
+\\[10pt]
+F_{a_{}} &= 0.8 \cdot F_{a}  = 0.8 \cdot 148.800\ \mathrm{MPa} &= 119.040\ \mathrm{MPa}  
+\\[10pt]
+f_{a} &= F_{a_{}} \cdot 0.5  = 119.040\ \mathrm{MPa} \cdot 0.5 &= 59.520\ \mathrm{MPa}  
+\\[10pt]
+\mathrm{Area}_{req} &= \frac{ p }{ f_{a} }  = \frac{ 499.000\ \mathrm{kN} }{ 59.520\ \mathrm{MPa} } &= 8383.737\ \mathrm{mm}^{2}  
+\\[10pt]
+F_{b} &= 0.6 \cdot F_{y}  = 0.6 \cdot 248.000\ \mathrm{MPa} &= 148.800\ \mathrm{MPa}  
+\\[10pt]
+f_{b} &= F_{b} \cdot 0.8  = 148.800\ \mathrm{MPa} \cdot 0.8 &= 119.040\ \mathrm{MPa}  
+\\[10pt]
+\mathrm{Sx}_{req} &= \frac{ m_{x} }{ f_{b} }  = \frac{ 307.510\ \mathrm{kN} \cdot \mathrm{m} }{ 119.040\ \mathrm{MPa} } &= 2583249.328\ \mathrm{mm}^{3}  
+\end{aligned}
+
+\begin{aligned}
+\mathrm{name} &= \mathrm{W14X120} \; 
+ &A &= 22800.000\ \mathrm{mm}^{2} \; 
+ &d &= 368.000\ \mathrm{mm} \; 
+\\[10pt]
+ b_{f} &= 373.000\ \mathrm{mm} \; 
+ &t_{f} &= 23.900\ \mathrm{mm} \; 
+ &t_{w} &= 15.000\ \mathrm{mm} \; 
+\\[10pt]
+ S_{x} &= 3110000.000\ \mathrm{mm}^{3} \; 
+ &S_{y} &= 1110000.000\ \mathrm{mm}^{3} \; 
+ &I_{x} &= 574000000.000\ \mathrm{mm}^{4} \; 
+\\[10pt]
+ I_{y} &= 206000000.000\ \mathrm{mm}^{4} \; 
+ &r_{x} &= 158.000\ \mathrm{mm} \; 
+ &r_{y} &= 95.000\ \mathrm{mm} \; 
+\\[10pt]
+ m_{u} &= 307.510\ \mathrm{kN} \cdot \mathrm{m} \; 
+ &f_{y} &= 248.000\ \mathrm{MPa} \; 
+ &\mathrm{axial} &= 499.000\ \mathrm{kN} \; 
+\\[10pt]
+\end{aligned}
+</p></td><td><h4>Check Slenderness</h4><p style='font-size:10px;'>
+\begin{aligned}
+\mathrm{col}_{section} &= \mathrm{W14X120} \; 
+\\[10pt]
+\mathrm{beam}_{section} &= \mathrm{W14X90} \; 
+\\[10pt]
+\mathrm{column}_{1} &= \frac{ I_{x} }{ 4000 \cdot \mathrm{mm} }  = \frac{ 574000000.000\ \mathrm{mm}^{4} }{ 4000 \cdot mm } &= 143500.000\ \mathrm{mm}^{3}  
+\\[10pt]
+\mathrm{column}_{2} &= \frac{ I_{x} }{ 3000 \cdot \mathrm{mm} }  = \frac{ 574000000.000\ \mathrm{mm}^{4} }{ 3000 \cdot mm } &= 191333.333\ \mathrm{mm}^{3}  
+\\[10pt]
+\mathrm{beam}_{1} &= \frac{ \mathrm{Ix}_{beam} }{ 7000 \cdot \mathrm{mm} }  = \frac{ 416000000.000\ \mathrm{mm}^{4} }{ 7000 \cdot mm } &= 59428.571\ \mathrm{mm}^{3}  
+\\[10pt]
+\mathrm{beam}_{2} &= \frac{ \mathrm{Ix}_{beam} }{ 6000 \cdot \mathrm{mm} }  = \frac{ 416000000.000\ \mathrm{mm}^{4} }{ 6000 \cdot mm } &= 69333.333\ \mathrm{mm}^{3}  
+\\[10pt]
+G_{d} &= \frac{ \mathrm{column}_{1} + \mathrm{column}_{2} }{ \mathrm{beam}_{1} + \mathrm{beam}_{2} }  = \frac{ 143500.000\ \mathrm{mm}^{3} + 191333.333\ \mathrm{mm}^{3} }{ 59428.571\ \mathrm{mm}^{3} + 69333.333\ \mathrm{mm}^{3} } &= 2.600  
+\\[10pt]
+G_{a} &= 1.000 \; \;\textrm{(Fixed)}
+\end{aligned}
+
+\begin{aligned}
+k &= 1.500 \; \;\textrm{(From Alignment Chart)}
+\\[10pt]
+x &= \left( \frac{ \left( G_{d} \cdot G_{a} \cdot \left( \frac{ \pi }{ k } \right) ^{ 2 } \right) - 36 }{ 6 \cdot \left( G_{d} + G_{a} \right) } - \left( \frac{ \frac{ \pi }{ k } }{ \tan \left( \frac{ \pi }{ k } \right) } \right) \right)  = \left( \frac{ \left( 2.600 \cdot 1.000 \cdot \left( \frac{ 3.142 }{ 1.500 } \right) ^{ 2 } \right) - 36 }{ 6 \cdot \left( 2.600 + 1.000 \right) } - \left( \frac{ \frac{ 3.142 }{ 1.500 } }{ \tan \left( \frac{ 3.142 }{ 1.500 } \right) } \right) \right) &= 0.071  
+\end{aligned}
+
+\begin{aligned}
+\mathrm{SR} &= \operatorname{max} { \left( \frac{ k \cdot l }{ r_{x} } ,\  k \cdot l \cdot \frac{1} { r_{y} } \right) }  = \operatorname{max} { \left( \frac{ 1.500 \cdot 4.000\ \mathrm{m} }{ 158.000\ \mathrm{mm} } ,\  1.500 \cdot 4.000\ \mathrm{m} \cdot \frac{1} { 95.000\ \mathrm{mm} } \right) } &= 63.158  
+\\[10pt]
+C_{c} &= \sqrt { \frac{ 2 \cdot \left( \pi \right) ^{ 2 } \cdot 200000 \cdot \mathrm{MPa} }{ f_{y} } }  = \sqrt { \frac{ 2 \cdot \left( 3.142 \right) ^{ 2 } \cdot 200000 \cdot MPa }{ 248.000\ \mathrm{MPa} } } &= 126.169  
+\\[10pt]
+&\text{Since, } \mathrm{SR} \lt C_{c} \rightarrow \left( 63.158 \lt 126.169 \right) :   \\[10pt]
+\mathrm{Column} &= \mathrm{Short} \; 
+\end{aligned}
+</p></td><td><h4>Stability and Strength Check</h4><p style='font-size:10px;'>
+\begin{aligned}
+F_{s} &= \frac{ 5 }{ 3 } + \left( 3 \cdot \frac{ \mathrm{SR} }{ 8 \cdot C_{c} } \right) - \frac{ \left( \mathrm{SR} \right) ^{ 3 } }{ 8 \cdot \left( C_{c} \right) ^{ 3 } }  = \frac{ 5 }{ 3 } + \left( 3 \cdot \frac{ 63.158 }{ 8 \cdot 126.169 } \right) - \frac{ \left( 63.158 \right) ^{ 3 } }{ 8 \cdot \left( 126.169 \right) ^{ 3 } } &= 1.839  
+\\[10pt]
+F_{a} &= \left( 1 - \frac{ \left( \mathrm{SR} \right) ^{ 2 } }{ \left( 2 \cdot C_{c} \right) ^{ 2 } } \right) \cdot \left( \frac{ f_{y} }{ F_{s} } \right)  = \left( 1 - \frac{ \left( 63.158 \right) ^{ 2 } }{ \left( 2 \cdot 126.169 \right) ^{ 2 } } \right) \cdot \left( \frac{ 248.000\ \mathrm{MPa} }{ 1.839 } \right) &= 126.428\ \mathrm{MPa}  
+\\[10pt]
+f_{a} &= \frac{ \mathrm{axial} }{ A }  = \frac{ 499.000\ \mathrm{kN} }{ 22800.000\ \mathrm{mm}^{2} } &= 21.886\ \mathrm{MPa}  
+\\[10pt]
+\mathrm{Fe}_{x} &= \frac{ 12 \cdot \left( \pi \right) ^{ 2 } \cdot E_{s} }{ 23 \cdot \left( \mathrm{SR} \right) ^{ 2 } }  = \frac{ 12 \cdot \left( 3.142 \right) ^{ 2 } \cdot 200.000\ \mathrm{GPa} }{ 23 \cdot \left( 63.158 \right) ^{ 2 } } &= 258.183\ \mathrm{MPa}  
+\\[10pt]
+\mathrm{Magnification}_{factor} &= \frac{ \mathrm{Cm} }{ 1 - \left( \frac{ f_{a} }{ \mathrm{Fe}_{x} } \right) }  = \frac{ 0.850 }{ 1 - \left( \frac{ 21.886\ \mathrm{MPa} }{ 258.183\ \mathrm{MPa} } \right) } &= 0.929  
+\\[10pt]
+&\text{Since, } \mathrm{Magnification}_{factor} \lt 1 \rightarrow \left( 0.929 \lt 1 \right) :   \\[10pt]
+\mathrm{Magnification}_{factor} &= 0.929 \; 
+\\[10pt]
+f_{bx} &= \frac{ m_{x} }{ S_{x} }  = \frac{ 307.510\ \mathrm{kN} \cdot \mathrm{m} }{ 3110000.000\ \mathrm{mm}^{3} } &= 98.878\ \mathrm{MPa}  
+\\[10pt]
+l_{c} &= \operatorname{min} { \left( \frac{ 200 \cdot b_{f} }{ \sqrt { \mathrm{fy} } } ,\  137900 \cdot \frac{1} { \frac{ \mathrm{fy} \cdot d }{ b_{f} \cdot t_{f} } } \right) }  = \operatorname{min} { \left( \frac{ 200 \cdot 373.000\ \mathrm{mm} }{ \sqrt { 248 } } ,\  137900 \cdot \frac{1} { \frac{ 248 \cdot 368.000\ \mathrm{mm} }{ 373.000\ \mathrm{mm} \cdot 23.900\ \mathrm{mm} } } \right) } &= 4.737\ \mathrm{m}  
+\\[10pt]
+l_{u} &= \operatorname{max} { \left( \frac{ 200 \cdot b_{f} }{ \sqrt { \mathrm{fy} } } ,\  137900 \cdot \frac{1} { \frac{ \mathrm{fy} \cdot d }{ b_{f} \cdot t_{f} } } \right) }  = \operatorname{max} { \left( \frac{ 200 \cdot 373.000\ \mathrm{mm} }{ \sqrt { 248 } } ,\  137900 \cdot \frac{1} { \frac{ 248 \cdot 368.000\ \mathrm{mm} }{ 373.000\ \mathrm{mm} \cdot 23.900\ \mathrm{mm} } } \right) } &= 13.470\ \mathrm{m}  
+\\[10pt]
+&\text{Since, } l_{b} \lt l_{c} \rightarrow \left( 4.000\ \mathrm{m} \lt 4.737\ \mathrm{m} \right) :   \\[10pt]
+\mathrm{case} &= 1 \; 
+\\[10pt]
+F_{bx} &= 0.66 \cdot f_{y}  = 0.66 \cdot 248.000\ \mathrm{MPa} &= 163.680\ \mathrm{MPa}  
+\\[10pt]
+\mathrm{Stability} &= \frac{ f_{a} }{ F_{a} } + \mathrm{Magnification}_{factor} \cdot \left( \frac{ f_{bx} }{ F_{bx} } \right)  = \frac{ 21.886\ \mathrm{MPa} }{ 126.428\ \mathrm{MPa} } + 0.929 \cdot \left( \frac{ 98.878\ \mathrm{MPa} }{ 163.680\ \mathrm{MPa} } \right) &= 0.734  
+\\[10pt]
+&\text{Since, } \mathrm{Stability} \lt 1 \rightarrow \left( 0.734 \lt 1 \right) :   \\[10pt]
+\mathrm{Column} &= \mathrm{Safe} \; 
+\\[10pt]
+\mathrm{Strenght} &= \left( \frac{ f_{a} }{ 0.60 \cdot f_{y} } \right) + \left( \frac{ f_{bx} }{ F_{bx} } \right)  = \left( \frac{ 21.886\ \mathrm{MPa} }{ 0.60 \cdot 248.000\ \mathrm{MPa} } \right) + \left( \frac{ 98.878\ \mathrm{MPa} }{ 163.680\ \mathrm{MPa} } \right) &= 0.751  
+\\[10pt]
+&\text{Since, } \mathrm{Strenght} \lt 1 \rightarrow \left( 0.751 \lt 1 \right) :   \\[10pt]
+\mathrm{Column} &= \mathrm{Safe} \; 
+\end{aligned}
+</p></td></tr><tr></tr><tr></tr></table></div>
+                            </div> <div class="container">
+                            <div class="table-div"> <table  id= "Column_W18X86_W12X210" ><tr><td><h4>Choose Section</h4><p style='font-size:10px;'>
+\begin{aligned}
+F_{s} &= \frac{ 5 }{ 3 } &= 1.667  
+\\[10pt]
+F_{a} &= \left( 1 - 0 \right) \cdot \left( \frac{ F_{y} }{ F_{s} } \right)  = \left( 1 - 0 \right) \cdot \left( \frac{ 248.000\ \mathrm{MPa} }{ 1.667 } \right) &= 148.800\ \mathrm{MPa}  
+\\[10pt]
+F_{a_{}} &= 0.8 \cdot F_{a}  = 0.8 \cdot 148.800\ \mathrm{MPa} &= 119.040\ \mathrm{MPa}  
+\\[10pt]
+f_{a} &= F_{a_{}} \cdot 0.5  = 119.040\ \mathrm{MPa} \cdot 0.5 &= 59.520\ \mathrm{MPa}  
+\\[10pt]
+\mathrm{Area}_{req} &= \frac{ p }{ f_{a} }  = \frac{ 499.000\ \mathrm{kN} }{ 59.520\ \mathrm{MPa} } &= 8383.737\ \mathrm{mm}^{2}  
+\\[10pt]
+F_{b} &= 0.6 \cdot F_{y}  = 0.6 \cdot 248.000\ \mathrm{MPa} &= 148.800\ \mathrm{MPa}  
+\\[10pt]
+f_{b} &= F_{b} \cdot 0.8  = 148.800\ \mathrm{MPa} \cdot 0.8 &= 119.040\ \mathrm{MPa}  
+\\[10pt]
+\mathrm{Sx}_{req} &= \frac{ m_{x} }{ f_{b} }  = \frac{ 307.510\ \mathrm{kN} \cdot \mathrm{m} }{ 119.040\ \mathrm{MPa} } &= 2583249.328\ \mathrm{mm}^{3}  
+\end{aligned}
+
+\begin{aligned}
+\mathrm{name} &= \mathrm{W12X210} \; 
+ &A &= 39900.000\ \mathrm{mm}^{2} \; 
+ &d &= 373.000\ \mathrm{mm} \; 
+\\[10pt]
+ b_{f} &= 325.000\ \mathrm{mm} \; 
+ &t_{f} &= 48.300\ \mathrm{mm} \; 
+ &t_{w} &= 30.000\ \mathrm{mm} \; 
+\\[10pt]
+ S_{x} &= 4790000.000\ \mathrm{mm}^{3} \; 
+ &S_{y} &= 1700000.000\ \mathrm{mm}^{3} \; 
+ &I_{x} &= 891000000.000\ \mathrm{mm}^{4} \; 
+\\[10pt]
+ I_{y} &= 276000000.000\ \mathrm{mm}^{4} \; 
+ &r_{x} &= 150.000\ \mathrm{mm} \; 
+ &r_{y} &= 83.300\ \mathrm{mm} \; 
+\\[10pt]
+ m_{u} &= 307.510\ \mathrm{kN} \cdot \mathrm{m} \; 
+ &f_{y} &= 248.000\ \mathrm{MPa} \; 
+ &\mathrm{axial} &= 499.000\ \mathrm{kN} \; 
+\\[10pt]
+\end{aligned}
+</p></td><td><h4>Check Slenderness</h4><p style='font-size:10px;'>
+\begin{aligned}
+\mathrm{col}_{section} &= \mathrm{W12X210} \; 
+\\[10pt]
+\mathrm{beam}_{section} &= \mathrm{W18X86} \; 
+\\[10pt]
+\mathrm{column}_{1} &= \frac{ I_{x} }{ 4000 \cdot \mathrm{mm} }  = \frac{ 891000000.000\ \mathrm{mm}^{4} }{ 4000 \cdot mm } &= 222750.000\ \mathrm{mm}^{3}  
+\\[10pt]
+\mathrm{column}_{2} &= \frac{ I_{x} }{ 3000 \cdot \mathrm{mm} }  = \frac{ 891000000.000\ \mathrm{mm}^{4} }{ 3000 \cdot mm } &= 297000.000\ \mathrm{mm}^{3}  
+\\[10pt]
+\mathrm{beam}_{1} &= \frac{ \mathrm{Ix}_{beam} }{ 7000 \cdot \mathrm{mm} }  = \frac{ 637000000.000\ \mathrm{mm}^{4} }{ 7000 \cdot mm } &= 91000.000\ \mathrm{mm}^{3}  
+\\[10pt]
+\mathrm{beam}_{2} &= \frac{ \mathrm{Ix}_{beam} }{ 6000 \cdot \mathrm{mm} }  = \frac{ 637000000.000\ \mathrm{mm}^{4} }{ 6000 \cdot mm } &= 106166.667\ \mathrm{mm}^{3}  
+\\[10pt]
+G_{d} &= \frac{ \mathrm{column}_{1} + \mathrm{column}_{2} }{ \mathrm{beam}_{1} + \mathrm{beam}_{2} }  = \frac{ 222750.000\ \mathrm{mm}^{3} + 297000.000\ \mathrm{mm}^{3} }{ 91000.000\ \mathrm{mm}^{3} + 106166.667\ \mathrm{mm}^{3} } &= 2.636  
+\\[10pt]
+G_{a} &= 1.000 \; \;\textrm{(Fixed)}
+\end{aligned}
+
+\begin{aligned}
+k &= 1.500 \; \;\textrm{(From Alignment Chart)}
+\\[10pt]
+x &= \left( \frac{ \left( G_{d} \cdot G_{a} \cdot \left( \frac{ \pi }{ k } \right) ^{ 2 } \right) - 36 }{ 6 \cdot \left( G_{d} + G_{a} \right) } - \left( \frac{ \frac{ \pi }{ k } }{ \tan \left( \frac{ \pi }{ k } \right) } \right) \right)  = \left( \frac{ \left( 2.636 \cdot 1.000 \cdot \left( \frac{ 3.142 }{ 1.500 } \right) ^{ 2 } \right) - 36 }{ 6 \cdot \left( 2.636 + 1.000 \right) } - \left( \frac{ \frac{ 3.142 }{ 1.500 } }{ \tan \left( \frac{ 3.142 }{ 1.500 } \right) } \right) \right) &= 0.089  
+\end{aligned}
+
+\begin{aligned}
+\mathrm{SR} &= \operatorname{max} { \left( \frac{ k \cdot l }{ r_{x} } ,\  k \cdot l \cdot \frac{1} { r_{y} } \right) }  = \operatorname{max} { \left( \frac{ 1.500 \cdot 4.000\ \mathrm{m} }{ 150.000\ \mathrm{mm} } ,\  1.500 \cdot 4.000\ \mathrm{m} \cdot \frac{1} { 83.300\ \mathrm{mm} } \right) } &= 72.029  
+\\[10pt]
+C_{c} &= \sqrt { \frac{ 2 \cdot \left( \pi \right) ^{ 2 } \cdot 200000 \cdot \mathrm{MPa} }{ f_{y} } }  = \sqrt { \frac{ 2 \cdot \left( 3.142 \right) ^{ 2 } \cdot 200000 \cdot MPa }{ 248.000\ \mathrm{MPa} } } &= 126.169  
+\\[10pt]
+&\text{Since, } \mathrm{SR} \lt C_{c} \rightarrow \left( 72.029 \lt 126.169 \right) :   \\[10pt]
+\mathrm{Column} &= \mathrm{Short} \; 
+\end{aligned}
+</p></td><td><h4>Stability and Strength Check</h4><p style='font-size:10px;'>
+\begin{aligned}
+F_{s} &= \frac{ 5 }{ 3 } + \left( 3 \cdot \frac{ \mathrm{SR} }{ 8 \cdot C_{c} } \right) - \frac{ \left( \mathrm{SR} \right) ^{ 3 } }{ 8 \cdot \left( C_{c} \right) ^{ 3 } }  = \frac{ 5 }{ 3 } + \left( 3 \cdot \frac{ 72.029 }{ 8 \cdot 126.169 } \right) - \frac{ \left( 72.029 \right) ^{ 3 } }{ 8 \cdot \left( 126.169 \right) ^{ 3 } } &= 1.857  
+\\[10pt]
+F_{a} &= \left( 1 - \frac{ \left( \mathrm{SR} \right) ^{ 2 } }{ \left( 2 \cdot C_{c} \right) ^{ 2 } } \right) \cdot \left( \frac{ f_{y} }{ F_{s} } \right)  = \left( 1 - \frac{ \left( 72.029 \right) ^{ 2 } }{ \left( 2 \cdot 126.169 \right) ^{ 2 } } \right) \cdot \left( \frac{ 248.000\ \mathrm{MPa} }{ 1.857 } \right) &= 122.635\ \mathrm{MPa}  
+\\[10pt]
+f_{a} &= \frac{ \mathrm{axial} }{ A }  = \frac{ 499.000\ \mathrm{kN} }{ 39900.000\ \mathrm{mm}^{2} } &= 12.506\ \mathrm{MPa}  
+\\[10pt]
+\mathrm{Fe}_{x} &= \frac{ 12 \cdot \left( \pi \right) ^{ 2 } \cdot E_{s} }{ 23 \cdot \left( \mathrm{SR} \right) ^{ 2 } }  = \frac{ 12 \cdot \left( 3.142 \right) ^{ 2 } \cdot 200.000\ \mathrm{GPa} }{ 23 \cdot \left( 72.029 \right) ^{ 2 } } &= 198.505\ \mathrm{MPa}  
+\\[10pt]
+\mathrm{Magnification}_{factor} &= \frac{ \mathrm{Cm} }{ 1 - \left( \frac{ f_{a} }{ \mathrm{Fe}_{x} } \right) }  = \frac{ 0.850 }{ 1 - \left( \frac{ 12.506\ \mathrm{MPa} }{ 198.505\ \mathrm{MPa} } \right) } &= 0.907  
+\\[10pt]
+&\text{Since, } \mathrm{Magnification}_{factor} \lt 1 \rightarrow \left( 0.907 \lt 1 \right) :   \\[10pt]
+\mathrm{Magnification}_{factor} &= 0.907 \; 
+\\[10pt]
+f_{bx} &= \frac{ m_{x} }{ S_{x} }  = \frac{ 307.510\ \mathrm{kN} \cdot \mathrm{m} }{ 4790000.000\ \mathrm{mm}^{3} } &= 64.198\ \mathrm{MPa}  
+\\[10pt]
+l_{c} &= \operatorname{min} { \left( \frac{ 200 \cdot b_{f} }{ \sqrt { \mathrm{fy} } } ,\  137900 \cdot \frac{1} { \frac{ \mathrm{fy} \cdot d }{ b_{f} \cdot t_{f} } } \right) }  = \operatorname{min} { \left( \frac{ 200 \cdot 325.000\ \mathrm{mm} }{ \sqrt { 248 } } ,\  137900 \cdot \frac{1} { \frac{ 248 \cdot 373.000\ \mathrm{mm} }{ 325.000\ \mathrm{mm} \cdot 48.300\ \mathrm{mm} } } \right) } &= 4.128\ \mathrm{m}  
+\\[10pt]
+l_{u} &= \operatorname{max} { \left( \frac{ 200 \cdot b_{f} }{ \sqrt { \mathrm{fy} } } ,\  137900 \cdot \frac{1} { \frac{ \mathrm{fy} \cdot d }{ b_{f} \cdot t_{f} } } \right) }  = \operatorname{max} { \left( \frac{ 200 \cdot 325.000\ \mathrm{mm} }{ \sqrt { 248 } } ,\  137900 \cdot \frac{1} { \frac{ 248 \cdot 373.000\ \mathrm{mm} }{ 325.000\ \mathrm{mm} \cdot 48.300\ \mathrm{mm} } } \right) } &= 23.401\ \mathrm{m}  
+\\[10pt]
+&\text{Since, } l_{b} \lt l_{c} \rightarrow \left( 4.000\ \mathrm{m} \lt 4.128\ \mathrm{m} \right) :   \\[10pt]
+\mathrm{case} &= 1 \; 
+\\[10pt]
+F_{bx} &= 0.66 \cdot f_{y}  = 0.66 \cdot 248.000\ \mathrm{MPa} &= 163.680\ \mathrm{MPa}  
+\\[10pt]
+\mathrm{Stability} &= \frac{ f_{a} }{ F_{a} } + \mathrm{Magnification}_{factor} \cdot \left( \frac{ f_{bx} }{ F_{bx} } \right)  = \frac{ 12.506\ \mathrm{MPa} }{ 122.635\ \mathrm{MPa} } + 0.907 \cdot \left( \frac{ 64.198\ \mathrm{MPa} }{ 163.680\ \mathrm{MPa} } \right) &= 0.458  
+\\[10pt]
+&\text{Since, } \mathrm{Stability} \lt 1 \rightarrow \left( 0.458 \lt 1 \right) :   \\[10pt]
+\mathrm{Column} &= \mathrm{Safe} \; 
+\\[10pt]
+\mathrm{Strenght} &= \left( \frac{ f_{a} }{ 0.60 \cdot f_{y} } \right) + \left( \frac{ f_{bx} }{ F_{bx} } \right)  = \left( \frac{ 12.506\ \mathrm{MPa} }{ 0.60 \cdot 248.000\ \mathrm{MPa} } \right) + \left( \frac{ 64.198\ \mathrm{MPa} }{ 163.680\ \mathrm{MPa} } \right) &= 0.476  
+\\[10pt]
+&\text{Since, } \mathrm{Strenght} \lt 1 \rightarrow \left( 0.476 \lt 1 \right) :   \\[10pt]
+\mathrm{Column} &= \mathrm{Safe} \; 
+\end{aligned}
+</p></td></tr><tr></tr><tr></tr></table></div>
+                            </div> <div class="container">
+                            <div class="table-div"> <table  id= "Column_W16X89_W12X210" ><tr><td><h4>Choose Section</h4><p style='font-size:10px;'>
+\begin{aligned}
+F_{s} &= \frac{ 5 }{ 3 } &= 1.667  
+\\[10pt]
+F_{a} &= \left( 1 - 0 \right) \cdot \left( \frac{ F_{y} }{ F_{s} } \right)  = \left( 1 - 0 \right) \cdot \left( \frac{ 248.000\ \mathrm{MPa} }{ 1.667 } \right) &= 148.800\ \mathrm{MPa}  
+\\[10pt]
+F_{a_{}} &= 0.8 \cdot F_{a}  = 0.8 \cdot 148.800\ \mathrm{MPa} &= 119.040\ \mathrm{MPa}  
+\\[10pt]
+f_{a} &= F_{a_{}} \cdot 0.5  = 119.040\ \mathrm{MPa} \cdot 0.5 &= 59.520\ \mathrm{MPa}  
+\\[10pt]
+\mathrm{Area}_{req} &= \frac{ p }{ f_{a} }  = \frac{ 499.000\ \mathrm{kN} }{ 59.520\ \mathrm{MPa} } &= 8383.737\ \mathrm{mm}^{2}  
+\\[10pt]
+F_{b} &= 0.6 \cdot F_{y}  = 0.6 \cdot 248.000\ \mathrm{MPa} &= 148.800\ \mathrm{MPa}  
+\\[10pt]
+f_{b} &= F_{b} \cdot 0.8  = 148.800\ \mathrm{MPa} \cdot 0.8 &= 119.040\ \mathrm{MPa}  
+\\[10pt]
+\mathrm{Sx}_{req} &= \frac{ m_{x} }{ f_{b} }  = \frac{ 307.510\ \mathrm{kN} \cdot \mathrm{m} }{ 119.040\ \mathrm{MPa} } &= 2583249.328\ \mathrm{mm}^{3}  
+\end{aligned}
+
+\begin{aligned}
+\mathrm{name} &= \mathrm{W12X210} \; 
+ &A &= 39900.000\ \mathrm{mm}^{2} \; 
+ &d &= 373.000\ \mathrm{mm} \; 
+\\[10pt]
+ b_{f} &= 325.000\ \mathrm{mm} \; 
+ &t_{f} &= 48.300\ \mathrm{mm} \; 
+ &t_{w} &= 30.000\ \mathrm{mm} \; 
+\\[10pt]
+ S_{x} &= 4790000.000\ \mathrm{mm}^{3} \; 
+ &S_{y} &= 1700000.000\ \mathrm{mm}^{3} \; 
+ &I_{x} &= 891000000.000\ \mathrm{mm}^{4} \; 
+\\[10pt]
+ I_{y} &= 276000000.000\ \mathrm{mm}^{4} \; 
+ &r_{x} &= 150.000\ \mathrm{mm} \; 
+ &r_{y} &= 83.300\ \mathrm{mm} \; 
+\\[10pt]
+ m_{u} &= 307.510\ \mathrm{kN} \cdot \mathrm{m} \; 
+ &f_{y} &= 248.000\ \mathrm{MPa} \; 
+ &\mathrm{axial} &= 499.000\ \mathrm{kN} \; 
+\\[10pt]
+\end{aligned}
+</p></td><td><h4>Check Slenderness</h4><p style='font-size:10px;'>
+\begin{aligned}
+\mathrm{col}_{section} &= \mathrm{W12X210} \; 
+\\[10pt]
+\mathrm{beam}_{section} &= \mathrm{W16X89} \; 
+\\[10pt]
+\mathrm{column}_{1} &= \frac{ I_{x} }{ 4000 \cdot \mathrm{mm} }  = \frac{ 891000000.000\ \mathrm{mm}^{4} }{ 4000 \cdot mm } &= 222750.000\ \mathrm{mm}^{3}  
+\\[10pt]
+\mathrm{column}_{2} &= \frac{ I_{x} }{ 3000 \cdot \mathrm{mm} }  = \frac{ 891000000.000\ \mathrm{mm}^{4} }{ 3000 \cdot mm } &= 297000.000\ \mathrm{mm}^{3}  
+\\[10pt]
+\mathrm{beam}_{1} &= \frac{ \mathrm{Ix}_{beam} }{ 7000 \cdot \mathrm{mm} }  = \frac{ 541000000.000\ \mathrm{mm}^{4} }{ 7000 \cdot mm } &= 77285.714\ \mathrm{mm}^{3}  
+\\[10pt]
+\mathrm{beam}_{2} &= \frac{ \mathrm{Ix}_{beam} }{ 6000 \cdot \mathrm{mm} }  = \frac{ 541000000.000\ \mathrm{mm}^{4} }{ 6000 \cdot mm } &= 90166.667\ \mathrm{mm}^{3}  
+\\[10pt]
+G_{d} &= \frac{ \mathrm{column}_{1} + \mathrm{column}_{2} }{ \mathrm{beam}_{1} + \mathrm{beam}_{2} }  = \frac{ 222750.000\ \mathrm{mm}^{3} + 297000.000\ \mathrm{mm}^{3} }{ 77285.714\ \mathrm{mm}^{3} + 90166.667\ \mathrm{mm}^{3} } &= 3.104  
+\\[10pt]
+G_{a} &= 1.000 \; \;\textrm{(Fixed)}
+\end{aligned}
+
+\begin{aligned}
+k &= 1.550 \; \;\textrm{(From Alignment Chart)}
+\\[10pt]
+x &= \left( \frac{ \left( G_{d} \cdot G_{a} \cdot \left( \frac{ \pi }{ k } \right) ^{ 2 } \right) - 36 }{ 6 \cdot \left( G_{d} + G_{a} \right) } - \left( \frac{ \frac{ \pi }{ k } }{ \tan \left( \frac{ \pi }{ k } \right) } \right) \right)  = \left( \frac{ \left( 3.104 \cdot 1.000 \cdot \left( \frac{ 3.142 }{ 1.550 } \right) ^{ 2 } \right) - 36 }{ 6 \cdot \left( 3.104 + 1.000 \right) } - \left( \frac{ \frac{ 3.142 }{ 1.550 } }{ \tan \left( \frac{ 3.142 }{ 1.550 } \right) } \right) \right) &= 0.050  
+\end{aligned}
+
+\begin{aligned}
+\mathrm{SR} &= \operatorname{max} { \left( \frac{ k \cdot l }{ r_{x} } ,\  k \cdot l \cdot \frac{1} { r_{y} } \right) }  = \operatorname{max} { \left( \frac{ 1.550 \cdot 4.000\ \mathrm{m} }{ 150.000\ \mathrm{mm} } ,\  1.550 \cdot 4.000\ \mathrm{m} \cdot \frac{1} { 83.300\ \mathrm{mm} } \right) } &= 74.430  
+\\[10pt]
+C_{c} &= \sqrt { \frac{ 2 \cdot \left( \pi \right) ^{ 2 } \cdot 200000 \cdot \mathrm{MPa} }{ f_{y} } }  = \sqrt { \frac{ 2 \cdot \left( 3.142 \right) ^{ 2 } \cdot 200000 \cdot MPa }{ 248.000\ \mathrm{MPa} } } &= 126.169  
+\\[10pt]
+&\text{Since, } \mathrm{SR} \lt C_{c} \rightarrow \left( 74.430 \lt 126.169 \right) :   \\[10pt]
+\mathrm{Column} &= \mathrm{Short} \; 
+\end{aligned}
+</p></td><td><h4>Stability and Strength Check</h4><p style='font-size:10px;'>
+\begin{aligned}
+F_{s} &= \frac{ 5 }{ 3 } + \left( 3 \cdot \frac{ \mathrm{SR} }{ 8 \cdot C_{c} } \right) - \frac{ \left( \mathrm{SR} \right) ^{ 3 } }{ 8 \cdot \left( C_{c} \right) ^{ 3 } }  = \frac{ 5 }{ 3 } + \left( 3 \cdot \frac{ 74.430 }{ 8 \cdot 126.169 } \right) - \frac{ \left( 74.430 \right) ^{ 3 } }{ 8 \cdot \left( 126.169 \right) ^{ 3 } } &= 1.862  
+\\[10pt]
+F_{a} &= \left( 1 - \frac{ \left( \mathrm{SR} \right) ^{ 2 } }{ \left( 2 \cdot C_{c} \right) ^{ 2 } } \right) \cdot \left( \frac{ f_{y} }{ F_{s} } \right)  = \left( 1 - \frac{ \left( 74.430 \right) ^{ 2 } }{ \left( 2 \cdot 126.169 \right) ^{ 2 } } \right) \cdot \left( \frac{ 248.000\ \mathrm{MPa} }{ 1.862 } \right) &= 121.588\ \mathrm{MPa}  
+\\[10pt]
+f_{a} &= \frac{ \mathrm{axial} }{ A }  = \frac{ 499.000\ \mathrm{kN} }{ 39900.000\ \mathrm{mm}^{2} } &= 12.506\ \mathrm{MPa}  
+\\[10pt]
+\mathrm{Fe}_{x} &= \frac{ 12 \cdot \left( \pi \right) ^{ 2 } \cdot E_{s} }{ 23 \cdot \left( \mathrm{SR} \right) ^{ 2 } }  = \frac{ 12 \cdot \left( 3.142 \right) ^{ 2 } \cdot 200.000\ \mathrm{GPa} }{ 23 \cdot \left( 74.430 \right) ^{ 2 } } &= 185.904\ \mathrm{MPa}  
+\\[10pt]
+\mathrm{Magnification}_{factor} &= \frac{ \mathrm{Cm} }{ 1 - \left( \frac{ f_{a} }{ \mathrm{Fe}_{x} } \right) }  = \frac{ 0.850 }{ 1 - \left( \frac{ 12.506\ \mathrm{MPa} }{ 185.904\ \mathrm{MPa} } \right) } &= 0.911  
+\\[10pt]
+&\text{Since, } \mathrm{Magnification}_{factor} \lt 1 \rightarrow \left( 0.911 \lt 1 \right) :   \\[10pt]
+\mathrm{Magnification}_{factor} &= 0.911 \; 
+\\[10pt]
+f_{bx} &= \frac{ m_{x} }{ S_{x} }  = \frac{ 307.510\ \mathrm{kN} \cdot \mathrm{m} }{ 4790000.000\ \mathrm{mm}^{3} } &= 64.198\ \mathrm{MPa}  
+\\[10pt]
+l_{c} &= \operatorname{min} { \left( \frac{ 200 \cdot b_{f} }{ \sqrt { \mathrm{fy} } } ,\  137900 \cdot \frac{1} { \frac{ \mathrm{fy} \cdot d }{ b_{f} \cdot t_{f} } } \right) }  = \operatorname{min} { \left( \frac{ 200 \cdot 325.000\ \mathrm{mm} }{ \sqrt { 248 } } ,\  137900 \cdot \frac{1} { \frac{ 248 \cdot 373.000\ \mathrm{mm} }{ 325.000\ \mathrm{mm} \cdot 48.300\ \mathrm{mm} } } \right) } &= 4.128\ \mathrm{m}  
+\\[10pt]
+l_{u} &= \operatorname{max} { \left( \frac{ 200 \cdot b_{f} }{ \sqrt { \mathrm{fy} } } ,\  137900 \cdot \frac{1} { \frac{ \mathrm{fy} \cdot d }{ b_{f} \cdot t_{f} } } \right) }  = \operatorname{max} { \left( \frac{ 200 \cdot 325.000\ \mathrm{mm} }{ \sqrt { 248 } } ,\  137900 \cdot \frac{1} { \frac{ 248 \cdot 373.000\ \mathrm{mm} }{ 325.000\ \mathrm{mm} \cdot 48.300\ \mathrm{mm} } } \right) } &= 23.401\ \mathrm{m}  
+\\[10pt]
+&\text{Since, } l_{b} \lt l_{c} \rightarrow \left( 4.000\ \mathrm{m} \lt 4.128\ \mathrm{m} \right) :   \\[10pt]
+\mathrm{case} &= 1 \; 
+\\[10pt]
+F_{bx} &= 0.66 \cdot f_{y}  = 0.66 \cdot 248.000\ \mathrm{MPa} &= 163.680\ \mathrm{MPa}  
+\\[10pt]
+\mathrm{Stability} &= \frac{ f_{a} }{ F_{a} } + \mathrm{Magnification}_{factor} \cdot \left( \frac{ f_{bx} }{ F_{bx} } \right)  = \frac{ 12.506\ \mathrm{MPa} }{ 121.588\ \mathrm{MPa} } + 0.911 \cdot \left( \frac{ 64.198\ \mathrm{MPa} }{ 163.680\ \mathrm{MPa} } \right) &= 0.460  
+\\[10pt]
+&\text{Since, } \mathrm{Stability} \lt 1 \rightarrow \left( 0.460 \lt 1 \right) :   \\[10pt]
+\mathrm{Column} &= \mathrm{Safe} \; 
+\\[10pt]
+\mathrm{Strenght} &= \left( \frac{ f_{a} }{ 0.60 \cdot f_{y} } \right) + \left( \frac{ f_{bx} }{ F_{bx} } \right)  = \left( \frac{ 12.506\ \mathrm{MPa} }{ 0.60 \cdot 248.000\ \mathrm{MPa} } \right) + \left( \frac{ 64.198\ \mathrm{MPa} }{ 163.680\ \mathrm{MPa} } \right) &= 0.476  
+\\[10pt]
+&\text{Since, } \mathrm{Strenght} \lt 1 \rightarrow \left( 0.476 \lt 1 \right) :   \\[10pt]
+\mathrm{Column} &= \mathrm{Safe} \; 
+\end{aligned}
+</p></td></tr><tr></tr><tr></tr></table></div>
+                            </div> <div class="container">
+                            <div class="table-div"> <table  id= "Column_W16X89_W14X145" ><tr><td><h4>Choose Section</h4><p style='font-size:10px;'>
+\begin{aligned}
+F_{s} &= \frac{ 5 }{ 3 } &= 1.667  
+\\[10pt]
+F_{a} &= \left( 1 - 0 \right) \cdot \left( \frac{ F_{y} }{ F_{s} } \right)  = \left( 1 - 0 \right) \cdot \left( \frac{ 248.000\ \mathrm{MPa} }{ 1.667 } \right) &= 148.800\ \mathrm{MPa}  
+\\[10pt]
+F_{a_{}} &= 0.8 \cdot F_{a}  = 0.8 \cdot 148.800\ \mathrm{MPa} &= 119.040\ \mathrm{MPa}  
+\\[10pt]
+f_{a} &= F_{a_{}} \cdot 0.5  = 119.040\ \mathrm{MPa} \cdot 0.5 &= 59.520\ \mathrm{MPa}  
+\\[10pt]
+\mathrm{Area}_{req} &= \frac{ p }{ f_{a} }  = \frac{ 499.000\ \mathrm{kN} }{ 59.520\ \mathrm{MPa} } &= 8383.737\ \mathrm{mm}^{2}  
+\\[10pt]
+F_{b} &= 0.6 \cdot F_{y}  = 0.6 \cdot 248.000\ \mathrm{MPa} &= 148.800\ \mathrm{MPa}  
+\\[10pt]
+f_{b} &= F_{b} \cdot 0.8  = 148.800\ \mathrm{MPa} \cdot 0.8 &= 119.040\ \mathrm{MPa}  
+\\[10pt]
+\mathrm{Sx}_{req} &= \frac{ m_{x} }{ f_{b} }  = \frac{ 307.510\ \mathrm{kN} \cdot \mathrm{m} }{ 119.040\ \mathrm{MPa} } &= 2583249.328\ \mathrm{mm}^{3}  
+\end{aligned}
+
+\begin{aligned}
+\mathrm{name} &= \mathrm{W14X145} \; 
+ &A &= 27500.000\ \mathrm{mm}^{2} \; 
+ &d &= 376.000\ \mathrm{mm} \; 
+\\[10pt]
+ b_{f} &= 394.000\ \mathrm{mm} \; 
+ &t_{f} &= 27.700\ \mathrm{mm} \; 
+ &t_{w} &= 17.300\ \mathrm{mm} \; 
+\\[10pt]
+ S_{x} &= 3800000.000\ \mathrm{mm}^{3} \; 
+ &S_{y} &= 1430000.000\ \mathrm{mm}^{3} \; 
+ &I_{x} &= 712000000.000\ \mathrm{mm}^{4} \; 
+\\[10pt]
+ I_{y} &= 282000000.000\ \mathrm{mm}^{4} \; 
+ &r_{x} &= 161.000\ \mathrm{mm} \; 
+ &r_{y} &= 101.000\ \mathrm{mm} \; 
+\\[10pt]
+ m_{u} &= 307.510\ \mathrm{kN} \cdot \mathrm{m} \; 
+ &f_{y} &= 248.000\ \mathrm{MPa} \; 
+ &\mathrm{axial} &= 499.000\ \mathrm{kN} \; 
+\\[10pt]
+\end{aligned}
+</p></td><td><h4>Check Slenderness</h4><p style='font-size:10px;'>
+\begin{aligned}
+\mathrm{col}_{section} &= \mathrm{W14X145} \; 
+\\[10pt]
+\mathrm{beam}_{section} &= \mathrm{W16X89} \; 
+\\[10pt]
+\mathrm{column}_{1} &= \frac{ I_{x} }{ 4000 \cdot \mathrm{mm} }  = \frac{ 712000000.000\ \mathrm{mm}^{4} }{ 4000 \cdot mm } &= 178000.000\ \mathrm{mm}^{3}  
+\\[10pt]
+\mathrm{column}_{2} &= \frac{ I_{x} }{ 3000 \cdot \mathrm{mm} }  = \frac{ 712000000.000\ \mathrm{mm}^{4} }{ 3000 \cdot mm } &= 237333.333\ \mathrm{mm}^{3}  
+\\[10pt]
+\mathrm{beam}_{1} &= \frac{ \mathrm{Ix}_{beam} }{ 7000 \cdot \mathrm{mm} }  = \frac{ 541000000.000\ \mathrm{mm}^{4} }{ 7000 \cdot mm } &= 77285.714\ \mathrm{mm}^{3}  
+\\[10pt]
+\mathrm{beam}_{2} &= \frac{ \mathrm{Ix}_{beam} }{ 6000 \cdot \mathrm{mm} }  = \frac{ 541000000.000\ \mathrm{mm}^{4} }{ 6000 \cdot mm } &= 90166.667\ \mathrm{mm}^{3}  
+\\[10pt]
+G_{d} &= \frac{ \mathrm{column}_{1} + \mathrm{column}_{2} }{ \mathrm{beam}_{1} + \mathrm{beam}_{2} }  = \frac{ 178000.000\ \mathrm{mm}^{3} + 237333.333\ \mathrm{mm}^{3} }{ 77285.714\ \mathrm{mm}^{3} + 90166.667\ \mathrm{mm}^{3} } &= 2.480  
+\\[10pt]
+G_{a} &= 1.000 \; \;\textrm{(Fixed)}
+\end{aligned}
+
+\begin{aligned}
+k &= 1.500 \; \;\textrm{(From Alignment Chart)}
+\\[10pt]
+x &= \left( \frac{ \left( G_{d} \cdot G_{a} \cdot \left( \frac{ \pi }{ k } \right) ^{ 2 } \right) - 36 }{ 6 \cdot \left( G_{d} + G_{a} \right) } - \left( \frac{ \frac{ \pi }{ k } }{ \tan \left( \frac{ \pi }{ k } \right) } \right) \right)  = \left( \frac{ \left( 2.480 \cdot 1.000 \cdot \left( \frac{ 3.142 }{ 1.500 } \right) ^{ 2 } \right) - 36 }{ 6 \cdot \left( 2.480 + 1.000 \right) } - \left( \frac{ \frac{ 3.142 }{ 1.500 } }{ \tan \left( \frac{ 3.142 }{ 1.500 } \right) } \right) \right) &= 0.006  
+\end{aligned}
+
+\begin{aligned}
+\mathrm{SR} &= \operatorname{max} { \left( \frac{ k \cdot l }{ r_{x} } ,\  k \cdot l \cdot \frac{1} { r_{y} } \right) }  = \operatorname{max} { \left( \frac{ 1.500 \cdot 4.000\ \mathrm{m} }{ 161.000\ \mathrm{mm} } ,\  1.500 \cdot 4.000\ \mathrm{m} \cdot \frac{1} { 101.000\ \mathrm{mm} } \right) } &= 59.406  
+\\[10pt]
+C_{c} &= \sqrt { \frac{ 2 \cdot \left( \pi \right) ^{ 2 } \cdot 200000 \cdot \mathrm{MPa} }{ f_{y} } }  = \sqrt { \frac{ 2 \cdot \left( 3.142 \right) ^{ 2 } \cdot 200000 \cdot MPa }{ 248.000\ \mathrm{MPa} } } &= 126.169  
+\\[10pt]
+&\text{Since, } \mathrm{SR} \lt C_{c} \rightarrow \left( 59.406 \lt 126.169 \right) :   \\[10pt]
+\mathrm{Column} &= \mathrm{Short} \; 
+\end{aligned}
+</p></td><td><h4>Stability and Strength Check</h4><p style='font-size:10px;'>
+\begin{aligned}
+F_{s} &= \frac{ 5 }{ 3 } + \left( 3 \cdot \frac{ \mathrm{SR} }{ 8 \cdot C_{c} } \right) - \frac{ \left( \mathrm{SR} \right) ^{ 3 } }{ 8 \cdot \left( C_{c} \right) ^{ 3 } }  = \frac{ 5 }{ 3 } + \left( 3 \cdot \frac{ 59.406 }{ 8 \cdot 126.169 } \right) - \frac{ \left( 59.406 \right) ^{ 3 } }{ 8 \cdot \left( 126.169 \right) ^{ 3 } } &= 1.830  
+\\[10pt]
+F_{a} &= \left( 1 - \frac{ \left( \mathrm{SR} \right) ^{ 2 } }{ \left( 2 \cdot C_{c} \right) ^{ 2 } } \right) \cdot \left( \frac{ f_{y} }{ F_{s} } \right)  = \left( 1 - \frac{ \left( 59.406 \right) ^{ 2 } }{ \left( 2 \cdot 126.169 \right) ^{ 2 } } \right) \cdot \left( \frac{ 248.000\ \mathrm{MPa} }{ 1.830 } \right) &= 127.995\ \mathrm{MPa}  
+\\[10pt]
+f_{a} &= \frac{ \mathrm{axial} }{ A }  = \frac{ 499.000\ \mathrm{kN} }{ 27500.000\ \mathrm{mm}^{2} } &= 18.145\ \mathrm{MPa}  
+\\[10pt]
+\mathrm{Fe}_{x} &= \frac{ 12 \cdot \left( \pi \right) ^{ 2 } \cdot E_{s} }{ 23 \cdot \left( \mathrm{SR} \right) ^{ 2 } }  = \frac{ 12 \cdot \left( 3.142 \right) ^{ 2 } \cdot 200.000\ \mathrm{GPa} }{ 23 \cdot \left( 59.406 \right) ^{ 2 } } &= 291.826\ \mathrm{MPa}  
+\\[10pt]
+\mathrm{Magnification}_{factor} &= \frac{ \mathrm{Cm} }{ 1 - \left( \frac{ f_{a} }{ \mathrm{Fe}_{x} } \right) }  = \frac{ 0.850 }{ 1 - \left( \frac{ 18.145\ \mathrm{MPa} }{ 291.826\ \mathrm{MPa} } \right) } &= 0.906  
+\\[10pt]
+&\text{Since, } \mathrm{Magnification}_{factor} \lt 1 \rightarrow \left( 0.906 \lt 1 \right) :   \\[10pt]
+\mathrm{Magnification}_{factor} &= 0.906 \; 
+\\[10pt]
+f_{bx} &= \frac{ m_{x} }{ S_{x} }  = \frac{ 307.510\ \mathrm{kN} \cdot \mathrm{m} }{ 3800000.000\ \mathrm{mm}^{3} } &= 80.924\ \mathrm{MPa}  
+\\[10pt]
+l_{c} &= \operatorname{min} { \left( \frac{ 200 \cdot b_{f} }{ \sqrt { \mathrm{fy} } } ,\  137900 \cdot \frac{1} { \frac{ \mathrm{fy} \cdot d }{ b_{f} \cdot t_{f} } } \right) }  = \operatorname{min} { \left( \frac{ 200 \cdot 394.000\ \mathrm{mm} }{ \sqrt { 248 } } ,\  137900 \cdot \frac{1} { \frac{ 248 \cdot 376.000\ \mathrm{mm} }{ 394.000\ \mathrm{mm} \cdot 27.700\ \mathrm{mm} } } \right) } &= 5.004\ \mathrm{m}  
+\\[10pt]
+l_{u} &= \operatorname{max} { \left( \frac{ 200 \cdot b_{f} }{ \sqrt { \mathrm{fy} } } ,\  137900 \cdot \frac{1} { \frac{ \mathrm{fy} \cdot d }{ b_{f} \cdot t_{f} } } \right) }  = \operatorname{max} { \left( \frac{ 200 \cdot 394.000\ \mathrm{mm} }{ \sqrt { 248 } } ,\  137900 \cdot \frac{1} { \frac{ 248 \cdot 376.000\ \mathrm{mm} }{ 394.000\ \mathrm{mm} \cdot 27.700\ \mathrm{mm} } } \right) } &= 16.140\ \mathrm{m}  
+\\[10pt]
+&\text{Since, } l_{b} \lt l_{c} \rightarrow \left( 4.000\ \mathrm{m} \lt 5.004\ \mathrm{m} \right) :   \\[10pt]
+\mathrm{case} &= 1 \; 
+\\[10pt]
+F_{bx} &= 0.66 \cdot f_{y}  = 0.66 \cdot 248.000\ \mathrm{MPa} &= 163.680\ \mathrm{MPa}  
+\\[10pt]
+\mathrm{Stability} &= \frac{ f_{a} }{ F_{a} } + \mathrm{Magnification}_{factor} \cdot \left( \frac{ f_{bx} }{ F_{bx} } \right)  = \frac{ 18.145\ \mathrm{MPa} }{ 127.995\ \mathrm{MPa} } + 0.906 \cdot \left( \frac{ 80.924\ \mathrm{MPa} }{ 163.680\ \mathrm{MPa} } \right) &= 0.590  
+\\[10pt]
+&\text{Since, } \mathrm{Stability} \lt 1 \rightarrow \left( 0.590 \lt 1 \right) :   \\[10pt]
+\mathrm{Column} &= \mathrm{Safe} \; 
+\\[10pt]
+\mathrm{Strenght} &= \left( \frac{ f_{a} }{ 0.60 \cdot f_{y} } \right) + \left( \frac{ f_{bx} }{ F_{bx} } \right)  = \left( \frac{ 18.145\ \mathrm{MPa} }{ 0.60 \cdot 248.000\ \mathrm{MPa} } \right) + \left( \frac{ 80.924\ \mathrm{MPa} }{ 163.680\ \mathrm{MPa} } \right) &= 0.616  
+\\[10pt]
+&\text{Since, } \mathrm{Strenght} \lt 1 \rightarrow \left( 0.616 \lt 1 \right) :   \\[10pt]
+\mathrm{Column} &= \mathrm{Safe} \; 
+\end{aligned}
+</p></td></tr><tr></tr><tr></tr></table></div>
+                            </div> <div class="container">
+                            <div class="table-div"> <table  id= "Column_W14X90_W14X145" ><tr><td><h4>Choose Section</h4><p style='font-size:10px;'>
+\begin{aligned}
+F_{s} &= \frac{ 5 }{ 3 } &= 1.667  
+\\[10pt]
+F_{a} &= \left( 1 - 0 \right) \cdot \left( \frac{ F_{y} }{ F_{s} } \right)  = \left( 1 - 0 \right) \cdot \left( \frac{ 248.000\ \mathrm{MPa} }{ 1.667 } \right) &= 148.800\ \mathrm{MPa}  
+\\[10pt]
+F_{a_{}} &= 0.8 \cdot F_{a}  = 0.8 \cdot 148.800\ \mathrm{MPa} &= 119.040\ \mathrm{MPa}  
+\\[10pt]
+f_{a} &= F_{a_{}} \cdot 0.5  = 119.040\ \mathrm{MPa} \cdot 0.5 &= 59.520\ \mathrm{MPa}  
+\\[10pt]
+\mathrm{Area}_{req} &= \frac{ p }{ f_{a} }  = \frac{ 499.000\ \mathrm{kN} }{ 59.520\ \mathrm{MPa} } &= 8383.737\ \mathrm{mm}^{2}  
+\\[10pt]
+F_{b} &= 0.6 \cdot F_{y}  = 0.6 \cdot 248.000\ \mathrm{MPa} &= 148.800\ \mathrm{MPa}  
+\\[10pt]
+f_{b} &= F_{b} \cdot 0.8  = 148.800\ \mathrm{MPa} \cdot 0.8 &= 119.040\ \mathrm{MPa}  
+\\[10pt]
+\mathrm{Sx}_{req} &= \frac{ m_{x} }{ f_{b} }  = \frac{ 307.510\ \mathrm{kN} \cdot \mathrm{m} }{ 119.040\ \mathrm{MPa} } &= 2583249.328\ \mathrm{mm}^{3}  
+\end{aligned}
+
+\begin{aligned}
+\mathrm{name} &= \mathrm{W14X145} \; 
+ &A &= 27500.000\ \mathrm{mm}^{2} \; 
+ &d &= 376.000\ \mathrm{mm} \; 
+\\[10pt]
+ b_{f} &= 394.000\ \mathrm{mm} \; 
+ &t_{f} &= 27.700\ \mathrm{mm} \; 
+ &t_{w} &= 17.300\ \mathrm{mm} \; 
+\\[10pt]
+ S_{x} &= 3800000.000\ \mathrm{mm}^{3} \; 
+ &S_{y} &= 1430000.000\ \mathrm{mm}^{3} \; 
+ &I_{x} &= 712000000.000\ \mathrm{mm}^{4} \; 
+\\[10pt]
+ I_{y} &= 282000000.000\ \mathrm{mm}^{4} \; 
+ &r_{x} &= 161.000\ \mathrm{mm} \; 
+ &r_{y} &= 101.000\ \mathrm{mm} \; 
+\\[10pt]
+ m_{u} &= 307.510\ \mathrm{kN} \cdot \mathrm{m} \; 
+ &f_{y} &= 248.000\ \mathrm{MPa} \; 
+ &\mathrm{axial} &= 499.000\ \mathrm{kN} \; 
+\\[10pt]
+\end{aligned}
+</p></td><td><h4>Check Slenderness</h4><p style='font-size:10px;'>
+\begin{aligned}
+\mathrm{col}_{section} &= \mathrm{W14X145} \; 
+\\[10pt]
+\mathrm{beam}_{section} &= \mathrm{W14X90} \; 
+\\[10pt]
+\mathrm{column}_{1} &= \frac{ I_{x} }{ 4000 \cdot \mathrm{mm} }  = \frac{ 712000000.000\ \mathrm{mm}^{4} }{ 4000 \cdot mm } &= 178000.000\ \mathrm{mm}^{3}  
+\\[10pt]
+\mathrm{column}_{2} &= \frac{ I_{x} }{ 3000 \cdot \mathrm{mm} }  = \frac{ 712000000.000\ \mathrm{mm}^{4} }{ 3000 \cdot mm } &= 237333.333\ \mathrm{mm}^{3}  
+\\[10pt]
+\mathrm{beam}_{1} &= \frac{ \mathrm{Ix}_{beam} }{ 7000 \cdot \mathrm{mm} }  = \frac{ 416000000.000\ \mathrm{mm}^{4} }{ 7000 \cdot mm } &= 59428.571\ \mathrm{mm}^{3}  
+\\[10pt]
+\mathrm{beam}_{2} &= \frac{ \mathrm{Ix}_{beam} }{ 6000 \cdot \mathrm{mm} }  = \frac{ 416000000.000\ \mathrm{mm}^{4} }{ 6000 \cdot mm } &= 69333.333\ \mathrm{mm}^{3}  
+\\[10pt]
+G_{d} &= \frac{ \mathrm{column}_{1} + \mathrm{column}_{2} }{ \mathrm{beam}_{1} + \mathrm{beam}_{2} }  = \frac{ 178000.000\ \mathrm{mm}^{3} + 237333.333\ \mathrm{mm}^{3} }{ 59428.571\ \mathrm{mm}^{3} + 69333.333\ \mathrm{mm}^{3} } &= 3.226  
+\\[10pt]
+G_{a} &= 1.000 \; \;\textrm{(Fixed)}
+\end{aligned}
+
+\begin{aligned}
+k &= 1.550 \; \;\textrm{(From Alignment Chart)}
+\\[10pt]
+x &= \left( \frac{ \left( G_{d} \cdot G_{a} \cdot \left( \frac{ \pi }{ k } \right) ^{ 2 } \right) - 36 }{ 6 \cdot \left( G_{d} + G_{a} \right) } - \left( \frac{ \frac{ \pi }{ k } }{ \tan \left( \frac{ \pi }{ k } \right) } \right) \right)  = \left( \frac{ \left( 3.226 \cdot 1.000 \cdot \left( \frac{ 3.142 }{ 1.550 } \right) ^{ 2 } \right) - 36 }{ 6 \cdot \left( 3.226 + 1.000 \right) } - \left( \frac{ \frac{ 3.142 }{ 1.550 } }{ \tan \left( \frac{ 3.142 }{ 1.550 } \right) } \right) \right) &= 0.097  
+\end{aligned}
+
+\begin{aligned}
+\mathrm{SR} &= \operatorname{max} { \left( \frac{ k \cdot l }{ r_{x} } ,\  k \cdot l \cdot \frac{1} { r_{y} } \right) }  = \operatorname{max} { \left( \frac{ 1.550 \cdot 4.000\ \mathrm{m} }{ 161.000\ \mathrm{mm} } ,\  1.550 \cdot 4.000\ \mathrm{m} \cdot \frac{1} { 101.000\ \mathrm{mm} } \right) } &= 61.386  
+\\[10pt]
+C_{c} &= \sqrt { \frac{ 2 \cdot \left( \pi \right) ^{ 2 } \cdot 200000 \cdot \mathrm{MPa} }{ f_{y} } }  = \sqrt { \frac{ 2 \cdot \left( 3.142 \right) ^{ 2 } \cdot 200000 \cdot MPa }{ 248.000\ \mathrm{MPa} } } &= 126.169  
+\\[10pt]
+&\text{Since, } \mathrm{SR} \lt C_{c} \rightarrow \left( 61.386 \lt 126.169 \right) :   \\[10pt]
+\mathrm{Column} &= \mathrm{Short} \; 
+\end{aligned}
+</p></td><td><h4>Stability and Strength Check</h4><p style='font-size:10px;'>
+\begin{aligned}
+F_{s} &= \frac{ 5 }{ 3 } + \left( 3 \cdot \frac{ \mathrm{SR} }{ 8 \cdot C_{c} } \right) - \frac{ \left( \mathrm{SR} \right) ^{ 3 } }{ 8 \cdot \left( C_{c} \right) ^{ 3 } }  = \frac{ 5 }{ 3 } + \left( 3 \cdot \frac{ 61.386 }{ 8 \cdot 126.169 } \right) - \frac{ \left( 61.386 \right) ^{ 3 } }{ 8 \cdot \left( 126.169 \right) ^{ 3 } } &= 1.835  
+\\[10pt]
+F_{a} &= \left( 1 - \frac{ \left( \mathrm{SR} \right) ^{ 2 } }{ \left( 2 \cdot C_{c} \right) ^{ 2 } } \right) \cdot \left( \frac{ f_{y} }{ F_{s} } \right)  = \left( 1 - \frac{ \left( 61.386 \right) ^{ 2 } }{ \left( 2 \cdot 126.169 \right) ^{ 2 } } \right) \cdot \left( \frac{ 248.000\ \mathrm{MPa} }{ 1.835 } \right) &= 127.171\ \mathrm{MPa}  
+\\[10pt]
+f_{a} &= \frac{ \mathrm{axial} }{ A }  = \frac{ 499.000\ \mathrm{kN} }{ 27500.000\ \mathrm{mm}^{2} } &= 18.145\ \mathrm{MPa}  
+\\[10pt]
+\mathrm{Fe}_{x} &= \frac{ 12 \cdot \left( \pi \right) ^{ 2 } \cdot E_{s} }{ 23 \cdot \left( \mathrm{SR} \right) ^{ 2 } }  = \frac{ 12 \cdot \left( 3.142 \right) ^{ 2 } \cdot 200.000\ \mathrm{GPa} }{ 23 \cdot \left( 61.386 \right) ^{ 2 } } &= 273.302\ \mathrm{MPa}  
+\\[10pt]
+\mathrm{Magnification}_{factor} &= \frac{ \mathrm{Cm} }{ 1 - \left( \frac{ f_{a} }{ \mathrm{Fe}_{x} } \right) }  = \frac{ 0.850 }{ 1 - \left( \frac{ 18.145\ \mathrm{MPa} }{ 273.302\ \mathrm{MPa} } \right) } &= 0.910  
+\\[10pt]
+&\text{Since, } \mathrm{Magnification}_{factor} \lt 1 \rightarrow \left( 0.910 \lt 1 \right) :   \\[10pt]
+\mathrm{Magnification}_{factor} &= 0.910 \; 
+\\[10pt]
+f_{bx} &= \frac{ m_{x} }{ S_{x} }  = \frac{ 307.510\ \mathrm{kN} \cdot \mathrm{m} }{ 3800000.000\ \mathrm{mm}^{3} } &= 80.924\ \mathrm{MPa}  
+\\[10pt]
+l_{c} &= \operatorname{min} { \left( \frac{ 200 \cdot b_{f} }{ \sqrt { \mathrm{fy} } } ,\  137900 \cdot \frac{1} { \frac{ \mathrm{fy} \cdot d }{ b_{f} \cdot t_{f} } } \right) }  = \operatorname{min} { \left( \frac{ 200 \cdot 394.000\ \mathrm{mm} }{ \sqrt { 248 } } ,\  137900 \cdot \frac{1} { \frac{ 248 \cdot 376.000\ \mathrm{mm} }{ 394.000\ \mathrm{mm} \cdot 27.700\ \mathrm{mm} } } \right) } &= 5.004\ \mathrm{m}  
+\\[10pt]
+l_{u} &= \operatorname{max} { \left( \frac{ 200 \cdot b_{f} }{ \sqrt { \mathrm{fy} } } ,\  137900 \cdot \frac{1} { \frac{ \mathrm{fy} \cdot d }{ b_{f} \cdot t_{f} } } \right) }  = \operatorname{max} { \left( \frac{ 200 \cdot 394.000\ \mathrm{mm} }{ \sqrt { 248 } } ,\  137900 \cdot \frac{1} { \frac{ 248 \cdot 376.000\ \mathrm{mm} }{ 394.000\ \mathrm{mm} \cdot 27.700\ \mathrm{mm} } } \right) } &= 16.140\ \mathrm{m}  
+\\[10pt]
+&\text{Since, } l_{b} \lt l_{c} \rightarrow \left( 4.000\ \mathrm{m} \lt 5.004\ \mathrm{m} \right) :   \\[10pt]
+\mathrm{case} &= 1 \; 
+\\[10pt]
+F_{bx} &= 0.66 \cdot f_{y}  = 0.66 \cdot 248.000\ \mathrm{MPa} &= 163.680\ \mathrm{MPa}  
+\\[10pt]
+\mathrm{Stability} &= \frac{ f_{a} }{ F_{a} } + \mathrm{Magnification}_{factor} \cdot \left( \frac{ f_{bx} }{ F_{bx} } \right)  = \frac{ 18.145\ \mathrm{MPa} }{ 127.171\ \mathrm{MPa} } + 0.910 \cdot \left( \frac{ 80.924\ \mathrm{MPa} }{ 163.680\ \mathrm{MPa} } \right) &= 0.593  
+\\[10pt]
+&\text{Since, } \mathrm{Stability} \lt 1 \rightarrow \left( 0.593 \lt 1 \right) :   \\[10pt]
+\mathrm{Column} &= \mathrm{Safe} \; 
+\\[10pt]
+\mathrm{Strenght} &= \left( \frac{ f_{a} }{ 0.60 \cdot f_{y} } \right) + \left( \frac{ f_{bx} }{ F_{bx} } \right)  = \left( \frac{ 18.145\ \mathrm{MPa} }{ 0.60 \cdot 248.000\ \mathrm{MPa} } \right) + \left( \frac{ 80.924\ \mathrm{MPa} }{ 163.680\ \mathrm{MPa} } \right) &= 0.616  
+\\[10pt]
+&\text{Since, } \mathrm{Strenght} \lt 1 \rightarrow \left( 0.616 \lt 1 \right) :   \\[10pt]
+\mathrm{Column} &= \mathrm{Safe} \; 
+\end{aligned}
+</p></td></tr><tr></tr><tr></tr></table></div>
+                            </div> <div class="container">
+                            <div class="table-div"> <table  id= "Column_W14X90_W14X159" ><tr><td><h4>Choose Section</h4><p style='font-size:10px;'>
+\begin{aligned}
+F_{s} &= \frac{ 5 }{ 3 } &= 1.667  
+\\[10pt]
+F_{a} &= \left( 1 - 0 \right) \cdot \left( \frac{ F_{y} }{ F_{s} } \right)  = \left( 1 - 0 \right) \cdot \left( \frac{ 248.000\ \mathrm{MPa} }{ 1.667 } \right) &= 148.800\ \mathrm{MPa}  
+\\[10pt]
+F_{a_{}} &= 0.8 \cdot F_{a}  = 0.8 \cdot 148.800\ \mathrm{MPa} &= 119.040\ \mathrm{MPa}  
+\\[10pt]
+f_{a} &= F_{a_{}} \cdot 0.5  = 119.040\ \mathrm{MPa} \cdot 0.5 &= 59.520\ \mathrm{MPa}  
+\\[10pt]
+\mathrm{Area}_{req} &= \frac{ p }{ f_{a} }  = \frac{ 499.000\ \mathrm{kN} }{ 59.520\ \mathrm{MPa} } &= 8383.737\ \mathrm{mm}^{2}  
+\\[10pt]
+F_{b} &= 0.6 \cdot F_{y}  = 0.6 \cdot 248.000\ \mathrm{MPa} &= 148.800\ \mathrm{MPa}  
+\\[10pt]
+f_{b} &= F_{b} \cdot 0.8  = 148.800\ \mathrm{MPa} \cdot 0.8 &= 119.040\ \mathrm{MPa}  
+\\[10pt]
+\mathrm{Sx}_{req} &= \frac{ m_{x} }{ f_{b} }  = \frac{ 307.510\ \mathrm{kN} \cdot \mathrm{m} }{ 119.040\ \mathrm{MPa} } &= 2583249.328\ \mathrm{mm}^{3}  
+\end{aligned}
+
+\begin{aligned}
+\mathrm{name} &= \mathrm{W14X159} \; 
+ &A &= 30100.000\ \mathrm{mm}^{2} \; 
+ &d &= 381.000\ \mathrm{mm} \; 
+\\[10pt]
+ b_{f} &= 396.000\ \mathrm{mm} \; 
+ &t_{f} &= 30.200\ \mathrm{mm} \; 
+ &t_{w} &= 18.900\ \mathrm{mm} \; 
+\\[10pt]
+ S_{x} &= 4160000.000\ \mathrm{mm}^{3} \; 
+ &S_{y} &= 1580000.000\ \mathrm{mm}^{3} \; 
+ &I_{x} &= 791000000.000\ \mathrm{mm}^{4} \; 
+\\[10pt]
+ I_{y} &= 311000000.000\ \mathrm{mm}^{4} \; 
+ &r_{x} &= 162.000\ \mathrm{mm} \; 
+ &r_{y} &= 102.000\ \mathrm{mm} \; 
+\\[10pt]
+ m_{u} &= 307.510\ \mathrm{kN} \cdot \mathrm{m} \; 
+ &f_{y} &= 248.000\ \mathrm{MPa} \; 
+ &\mathrm{axial} &= 499.000\ \mathrm{kN} \; 
+\\[10pt]
+\end{aligned}
+</p></td><td><h4>Check Slenderness</h4><p style='font-size:10px;'>
+\begin{aligned}
+\mathrm{col}_{section} &= \mathrm{W14X159} \; 
+\\[10pt]
+\mathrm{beam}_{section} &= \mathrm{W14X90} \; 
+\\[10pt]
+\mathrm{column}_{1} &= \frac{ I_{x} }{ 4000 \cdot \mathrm{mm} }  = \frac{ 791000000.000\ \mathrm{mm}^{4} }{ 4000 \cdot mm } &= 197750.000\ \mathrm{mm}^{3}  
+\\[10pt]
+\mathrm{column}_{2} &= \frac{ I_{x} }{ 3000 \cdot \mathrm{mm} }  = \frac{ 791000000.000\ \mathrm{mm}^{4} }{ 3000 \cdot mm } &= 263666.667\ \mathrm{mm}^{3}  
+\\[10pt]
+\mathrm{beam}_{1} &= \frac{ \mathrm{Ix}_{beam} }{ 7000 \cdot \mathrm{mm} }  = \frac{ 416000000.000\ \mathrm{mm}^{4} }{ 7000 \cdot mm } &= 59428.571\ \mathrm{mm}^{3}  
+\\[10pt]
+\mathrm{beam}_{2} &= \frac{ \mathrm{Ix}_{beam} }{ 6000 \cdot \mathrm{mm} }  = \frac{ 416000000.000\ \mathrm{mm}^{4} }{ 6000 \cdot mm } &= 69333.333\ \mathrm{mm}^{3}  
+\\[10pt]
+G_{d} &= \frac{ \mathrm{column}_{1} + \mathrm{column}_{2} }{ \mathrm{beam}_{1} + \mathrm{beam}_{2} }  = \frac{ 197750.000\ \mathrm{mm}^{3} + 263666.667\ \mathrm{mm}^{3} }{ 59428.571\ \mathrm{mm}^{3} + 69333.333\ \mathrm{mm}^{3} } &= 3.583  
+\\[10pt]
+G_{a} &= 1.000 \; \;\textrm{(Fixed)}
+\end{aligned}
+
+\begin{aligned}
+k &= 1.600 \; \;\textrm{(From Alignment Chart)}
+\\[10pt]
+x &= \left( \frac{ \left( G_{d} \cdot G_{a} \cdot \left( \frac{ \pi }{ k } \right) ^{ 2 } \right) - 36 }{ 6 \cdot \left( G_{d} + G_{a} \right) } - \left( \frac{ \frac{ \pi }{ k } }{ \tan \left( \frac{ \pi }{ k } \right) } \right) \right)  = \left( \frac{ \left( 3.583 \cdot 1.000 \cdot \left( \frac{ 3.142 }{ 1.600 } \right) ^{ 2 } \right) - 36 }{ 6 \cdot \left( 3.583 + 1.000 \right) } - \left( \frac{ \frac{ 3.142 }{ 1.600 } }{ \tan \left( \frac{ 3.142 }{ 1.600 } \right) } \right) \right) &= 0.007  
+\end{aligned}
+
+\begin{aligned}
+\mathrm{SR} &= \operatorname{max} { \left( \frac{ k \cdot l }{ r_{x} } ,\  k \cdot l \cdot \frac{1} { r_{y} } \right) }  = \operatorname{max} { \left( \frac{ 1.600 \cdot 4.000\ \mathrm{m} }{ 162.000\ \mathrm{mm} } ,\  1.600 \cdot 4.000\ \mathrm{m} \cdot \frac{1} { 102.000\ \mathrm{mm} } \right) } &= 62.745  
+\\[10pt]
+C_{c} &= \sqrt { \frac{ 2 \cdot \left( \pi \right) ^{ 2 } \cdot 200000 \cdot \mathrm{MPa} }{ f_{y} } }  = \sqrt { \frac{ 2 \cdot \left( 3.142 \right) ^{ 2 } \cdot 200000 \cdot MPa }{ 248.000\ \mathrm{MPa} } } &= 126.169  
+\\[10pt]
+&\text{Since, } \mathrm{SR} \lt C_{c} \rightarrow \left( 62.745 \lt 126.169 \right) :   \\[10pt]
+\mathrm{Column} &= \mathrm{Short} \; 
+\end{aligned}
+</p></td><td><h4>Stability and Strength Check</h4><p style='font-size:10px;'>
+\begin{aligned}
+F_{s} &= \frac{ 5 }{ 3 } + \left( 3 \cdot \frac{ \mathrm{SR} }{ 8 \cdot C_{c} } \right) - \frac{ \left( \mathrm{SR} \right) ^{ 3 } }{ 8 \cdot \left( C_{c} \right) ^{ 3 } }  = \frac{ 5 }{ 3 } + \left( 3 \cdot \frac{ 62.745 }{ 8 \cdot 126.169 } \right) - \frac{ \left( 62.745 \right) ^{ 3 } }{ 8 \cdot \left( 126.169 \right) ^{ 3 } } &= 1.838  
+\\[10pt]
+F_{a} &= \left( 1 - \frac{ \left( \mathrm{SR} \right) ^{ 2 } }{ \left( 2 \cdot C_{c} \right) ^{ 2 } } \right) \cdot \left( \frac{ f_{y} }{ F_{s} } \right)  = \left( 1 - \frac{ \left( 62.745 \right) ^{ 2 } }{ \left( 2 \cdot 126.169 \right) ^{ 2 } } \right) \cdot \left( \frac{ 248.000\ \mathrm{MPa} }{ 1.838 } \right) &= 126.602\ \mathrm{MPa}  
+\\[10pt]
+f_{a} &= \frac{ \mathrm{axial} }{ A }  = \frac{ 499.000\ \mathrm{kN} }{ 30100.000\ \mathrm{mm}^{2} } &= 16.578\ \mathrm{MPa}  
+\\[10pt]
+\mathrm{Fe}_{x} &= \frac{ 12 \cdot \left( \pi \right) ^{ 2 } \cdot E_{s} }{ 23 \cdot \left( \mathrm{SR} \right) ^{ 2 } }  = \frac{ 12 \cdot \left( 3.142 \right) ^{ 2 } \cdot 200.000\ \mathrm{GPa} }{ 23 \cdot \left( 62.745 \right) ^{ 2 } } &= 261.591\ \mathrm{MPa}  
+\\[10pt]
+\mathrm{Magnification}_{factor} &= \frac{ \mathrm{Cm} }{ 1 - \left( \frac{ f_{a} }{ \mathrm{Fe}_{x} } \right) }  = \frac{ 0.850 }{ 1 - \left( \frac{ 16.578\ \mathrm{MPa} }{ 261.591\ \mathrm{MPa} } \right) } &= 0.908  
+\\[10pt]
+&\text{Since, } \mathrm{Magnification}_{factor} \lt 1 \rightarrow \left( 0.908 \lt 1 \right) :   \\[10pt]
+\mathrm{Magnification}_{factor} &= 0.908 \; 
+\\[10pt]
+f_{bx} &= \frac{ m_{x} }{ S_{x} }  = \frac{ 307.510\ \mathrm{kN} \cdot \mathrm{m} }{ 4160000.000\ \mathrm{mm}^{3} } &= 73.921\ \mathrm{MPa}  
+\\[10pt]
+l_{c} &= \operatorname{min} { \left( \frac{ 200 \cdot b_{f} }{ \sqrt { \mathrm{fy} } } ,\  137900 \cdot \frac{1} { \frac{ \mathrm{fy} \cdot d }{ b_{f} \cdot t_{f} } } \right) }  = \operatorname{min} { \left( \frac{ 200 \cdot 396.000\ \mathrm{mm} }{ \sqrt { 248 } } ,\  137900 \cdot \frac{1} { \frac{ 248 \cdot 381.000\ \mathrm{mm} }{ 396.000\ \mathrm{mm} \cdot 30.200\ \mathrm{mm} } } \right) } &= 5.029\ \mathrm{m}  
+\\[10pt]
+l_{u} &= \operatorname{max} { \left( \frac{ 200 \cdot b_{f} }{ \sqrt { \mathrm{fy} } } ,\  137900 \cdot \frac{1} { \frac{ \mathrm{fy} \cdot d }{ b_{f} \cdot t_{f} } } \right) }  = \operatorname{max} { \left( \frac{ 200 \cdot 396.000\ \mathrm{mm} }{ \sqrt { 248 } } ,\  137900 \cdot \frac{1} { \frac{ 248 \cdot 381.000\ \mathrm{mm} }{ 396.000\ \mathrm{mm} \cdot 30.200\ \mathrm{mm} } } \right) } &= 17.454\ \mathrm{m}  
+\\[10pt]
+&\text{Since, } l_{b} \lt l_{c} \rightarrow \left( 4.000\ \mathrm{m} \lt 5.029\ \mathrm{m} \right) :   \\[10pt]
+\mathrm{case} &= 1 \; 
+\\[10pt]
+F_{bx} &= 0.66 \cdot f_{y}  = 0.66 \cdot 248.000\ \mathrm{MPa} &= 163.680\ \mathrm{MPa}  
+\\[10pt]
+\mathrm{Stability} &= \frac{ f_{a} }{ F_{a} } + \mathrm{Magnification}_{factor} \cdot \left( \frac{ f_{bx} }{ F_{bx} } \right)  = \frac{ 16.578\ \mathrm{MPa} }{ 126.602\ \mathrm{MPa} } + 0.908 \cdot \left( \frac{ 73.921\ \mathrm{MPa} }{ 163.680\ \mathrm{MPa} } \right) &= 0.541  
+\\[10pt]
+&\text{Since, } \mathrm{Stability} \lt 1 \rightarrow \left( 0.541 \lt 1 \right) :   \\[10pt]
+\mathrm{Column} &= \mathrm{Safe} \; 
+\\[10pt]
+\mathrm{Strenght} &= \left( \frac{ f_{a} }{ 0.60 \cdot f_{y} } \right) + \left( \frac{ f_{bx} }{ F_{bx} } \right)  = \left( \frac{ 16.578\ \mathrm{MPa} }{ 0.60 \cdot 248.000\ \mathrm{MPa} } \right) + \left( \frac{ 73.921\ \mathrm{MPa} }{ 163.680\ \mathrm{MPa} } \right) &= 0.563  
+\\[10pt]
+&\text{Since, } \mathrm{Strenght} \lt 1 \rightarrow \left( 0.563 \lt 1 \right) :   \\[10pt]
+\mathrm{Column} &= \mathrm{Safe} \; 
+\end{aligned}
+</p></td></tr><tr></tr><tr></tr></table></div>
+                            </div>
+                        </body>
+
+                        </html>
