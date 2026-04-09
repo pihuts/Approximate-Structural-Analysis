@@ -1,154 +1,177 @@
 # Portal Frame Analysis Application
 
-A comprehensive structural engineering tool that performs portal frame analysis and design for multi-story, multi-bay steel frames. This application implements the Portal Method for lateral load analysis and includes distributed load analysis for gravity loads.
+A comprehensive structural engineering tool that performs portal frame analysis and design for multi-story, multi-bay steel frames. Features a modern MUI frontend, Python FastAPI backend, and Julia calculation engine with LaTeX-rendered calculations.
 
-## Features
+![Portal Frame Analysis](screenshots/Moment_diagram_column-abc.png)
 
-### Structural Analysis
-- **Portal Method Analysis**: Calculate member forces due to lateral loads
-- **Distributed Load Analysis**: Analyze gravity loads (dead and live loads)
-- **Load Combination**: Combine lateral and gravity loads per AISC requirements
-- **Force Diagrams**: Generate shear force, bending moment, and axial force diagrams
-
-### Steel Design
-- **AISC Section Selection**: Automatic selection of appropriate W-sections from database
-- **Member Design Checks**:
-  - Beam flexure and shear capacity
-  - Column stability and interaction equations
-  - Compact section checks
-  - Slenderness ratio evaluation
-
-### Documentation
-- **Automated Calculations**: Uses handcalcs to document structural calculations
-- **HTML/LaTeX Output**: Generate professional engineering calculation documentation
-- **Visualization**: Plot structural diagrams with force representations
-- **Screenshot Capabilities**: Automated screenshots of calculation results
-
-## Requirements
+## Architecture
 
 ```
-contourpy==1.3.1
-cycler==0.12.1
-fonttools==4.57.0
-joblib==1.4.2
-kiwisolver==1.4.8
-matplotlib==3.10.1
-numpy==2.2.4
-packaging==24.2
-pandas==2.2.3
-pillow==11.1.0
-pyparsing==3.2.3
-python-dateutil==2.9.0.post0
-pytz==2025.2
-scikit-learn==1.6.1
-scipy==1.15.2
-six==1.17.0
-threadpoolctl==3.6.0
-tzdata==2025.2
-handcalcs
-forallpeople
-selenium
+frontend/     React + TypeScript + MUI v5 + KaTeX
+  |
+  v  (HTTP/JSON)
+backend/      Python FastAPI
+  |
+  v  (subprocess JSON)
+julia/        Julia + Handcalcs + Unitful
 ```
 
-Additionally requires:
-- Chrome WebDriver for automated screenshots
-- AISC section data (Excel format)
+### Frontend (React + MUI)
+- Material UI v5 with professional engineering theme
+- Multi-section input form (Geometry, Forces, Material, Design)
+- 5-tab results dashboard (Portal, Gravity, Combinations, Beam Design, Column Design)
+- KaTeX LaTeX rendering for handcalc-style equations
+- Responsive layout with drawer navigation
 
-## Installation
+### Backend (Python FastAPI)
+- REST API at `http://localhost:8000`
+- `POST /api/analyze` - Full analysis with LaTeX rendering
+- `POST /api/analyze/fast` - Quick computation (no LaTeX)
+- `GET /api/aisc-sections` - W-section database
+- `GET /api/health` - Health check
+- Calls Julia engine via subprocess with JSON I/O
 
-1. Clone the repository
-2. Install the required packages:
-   ```
-   pip install -r requirements.txt
-   ```
-3. Download ChromeDriver and place it in the root directory
-4. Ensure AISC section data (`1.xlsx`) is available in the root directory
+### Calculation Engine (Julia)
+- `Handcalcs.jl` + `Unitful.jl` + `Latexify.jl` for rendered calculations
+- `@smartmath` macro for fast/render toggle (no duplicate code paths)
+- Typed solution structs for type-safe pipeline
+- Pure solver functions with validation at boundary
+- JSON adapter: `run(params::Dict)` pattern
 
-## Usage
+## Screenshots
 
-### Basic Setup
+### Portal Method Diagrams (Lateral Load Analysis)
 
-```python
-from portal_method import portalmethod
+**Column Shear Forces**
+![Column Shear Force](screenshots/Shear_force_column-abc.png)
 
-# Define structure parameters
-height = [4, 3, 3]  # Floor heights (m)
-storey = 3
-bay = 2
-bay_widths = np.array([6, 5.5])  # Bay widths for frame abc (m)
-bay_widths_123 = np.array([7, 6])  # Bay widths for frame 123 (m)
-force_list = np.array([21.88, 38.29, 40.96])  # Lateral forces (kN)
+**Column Moment Diagram**
+![Column Moment](screenshots/Moment_diagram_column-abc.png)
 
-# Initialize portal method
-frame_analysis = portalmethod(
-    Height=height,
-    Storey=storey,
-    Bay=bay,
-    Bay_abc=bay_widths,
-    Bay_123=bay_widths_123,
-    Force_list=force_list,
-    No_frames=3,
-    folder_name="MyProject",
-    fy=248,  # Steel yield strength (MPa)
-    color="cyan"
-)
+**Beam Moment Diagram**
+![Beam Moment](screenshots/Moment_diagram_beam-abc.png)
 
-# Run analyses
-frame_analysis.handcalc_approximate_and_figures()
-frame_analysis.handcalc_portal_and_figures()
-frame_analysis.load_combination_beam()
-frame_analysis.load_combination_column()
-frame_analysis.beam_parameters()
-frame_analysis.column_parameters()
-frame_analysis.html_makerl()
-frame_analysis.html_makerl1()
-frame_analysis.selenium_screenshot()
+**Beam Shear Diagram**
+![Beam Shear](screenshots/Shear_diagram_beam-abc.png)
+
+**Beam Axial Diagram**
+![Beam Axial](screenshots/Axial_diagram_beam-abc.png)
+
+### Approximate Method (Gravity Load Analysis)
+
+**Frame 1 - Dead Load**
+![Approximate Method Frame 1 Dead](screenshots/APPROXIMATE%20METHOD-FRAME-1-Dead.png)
+
+**Frame 1 - Live Load**
+![Approximate Method Frame 1 Live](screenshots/APPROXIMATE%20METHOD-FRAME-1-Live.png)
+
+**Frame 2 - Dead Load**
+![Approximate Method Frame 2 Dead](screenshots/APPROXIMATE%20METHOD-FRAME-2-Dead.png)
+
+**Frame 2 - Live Load**
+![Approximate Method Frame 2 Live](screenshots/APPROXIMATE%20METHOD-FRAME-2-Live.png)
+
+**Frame 3 - Dead Load**
+![Approximate Method Frame 3 Dead](screenshots/APPROXIMATE%20METHOD-FRAME-3-Dead.png)
+
+**Frame 3 - Live Load**
+![Approximate Method Frame 3 Live](screenshots/APPROXIMATE%20METHOD-FRAME-3-Live.png)
+
+**Frame A - Dead Load**
+![Approximate Method Frame A Dead](screenshots/APPROXIMATE%20METHOD-FRAME-A-Dead.png)
+
+**Frame A - Live Load**
+![Approximate Method Frame A Live](screenshots/APPROXIMATE%20METHOD-FRAME-A-Live.png)
+
+**Frame B - Dead Load**
+![Approximate Method Frame B Dead](screenshots/APPROXIMATE%20METHOD-FRAME-B-Dead.png)
+
+**Frame B - Live Load**
+![Approximate Method Frame B Live](screenshots/APPROXIMATE%20METHOD-FRAME-B-Live.png)
+
+**Frame C - Dead Load**
+![Approximate Method Frame C Dead](screenshots/APPROXIMATE%20METHOD-FRAME-C-Dead.png)
+
+**Frame C - Live Load**
+![Approximate Method Frame C Live](screenshots/APPROXIMATE%20METHOD-FRAME-C-Live.png)
+
+## Structural Analysis Features
+
+### Portal Method (Lateral Load)
+- Column shear distribution (exterior/interior)
+- Column bending moments
+- Beam moments from column equilibrium
+- Beam shear forces
+- Column axial forces (cumulative from top)
+
+### Distributed Load Analysis (Gravity)
+- Dead and live load distribution
+- Slab force tributary area calculations
+- Beam bending moment (0.8L clear span approximation)
+- Beam shear force
+
+### Load Combinations (AISC)
+- Combo 1: Dead + Live
+- Combo 2: Dead + 0.7 * Earthquake
+- Combo 3: Dead + 0.75 * Live + 0.525 * Earthquake
+
+### AISC Steel Design
+- Beam: Sx required, compact section check, LTB cases, shear check
+- Column: K-factor (alignment chart), slenderness, Fa, interaction equation
+- Automatic W-section selection from database
+
+## Quick Start
+
+### Prerequisites
+- Node.js 18+
+- Python 3.9+
+- Julia 1.9+
+
+### 1. Start Backend
+```bash
+cd backend
+pip install -r requirements.txt
+python server.py
+# Server runs at http://localhost:8000
 ```
 
-### Output Files
+### 2. Start Frontend
+```bash
+cd frontend
+npm install
+npm run dev
+# App runs at http://localhost:5173
+```
 
-The program creates a folder structure with the following components:
-- `Data`: CSV files with analysis results and HTML documentation
-- `Portal`: Diagrams for portal method analysis
-- `Approximate_Method`: Diagrams for distributed load analysis
-- `Portal_Pictures`: Screenshots of calculation results
-- `Latex_Comp`: LaTeX output of calculations
+### 3. Julia Setup (first time)
+```bash
+cd julia
+julia --project=. -e 'using Pkg; Pkg.instantiate()'
+```
 
-## Structure Model
+## Default Example (Pihuts)
+- 3 storeys, 2 bays
+- Heights: 4m, 3m, 3m
+- Bay widths (ABC): 6.0m, 5.5m
+- Bay widths (123): 7.0m, 6.0m
+- Lateral forces: 21.88, 38.29, 40.96 kN
+- Fy = 248 MPa
 
-The application models a multi-story, multi-bay frame with the following attributes:
-- Multiple stories with variable heights
-- Multiple bays with variable widths
-- Two perpendicular frames (abc and 123)
-- Portal method for lateral load distribution
-- Distributed loads for gravity analysis
+## Units
+All calculations use SI units internally:
+- Length: meters (m)
+- Force: kilonewtons (kN)
+- Stress: megapascals (MPa)
+- Mass: kilograms per cubic meter (kg/m^3)
 
-## Design Process
+## Reference Data
+The `data/` directory contains AISC W-section properties in CSV format.
 
-1. **Analysis Phase**:
-   - Portal method analysis for lateral loads
-   - Distributed load analysis for gravity loads
-   - Load combination according to design codes
-
-2. **Design Phase**:
-   - Beam selection based on moment and shear requirements
-   - Column selection based on axial-flexural interaction
-   - Capacity checks for all members
-
-3. **Documentation Phase**:
-   - Generate calculation documentation
-   - Create structural diagrams
-   - Compile final design report
-
-## Notes
-
-- Units are in SI (meters, kN)
-- Steel design follows AISC specifications
-- The application generates detailed calculation documentation for engineering review
-
-## Future Enhancements
-
-- P-Delta analysis capabilities
-- Dynamic analysis for seismic design
-- Connection design module
-- Foundation design integration
+## Formula Verification
+All structural formulas have been verified against AISC 360 specifications:
+- Portal method shear distribution: correct
+- 0.8L clear span beam approximation: standard
+- AISC compact section limits (bf/2tf, d/tw): correct
+- Column K-factor alignment chart: correct
+- Euler column formula with AISC F_s factor: correct
+- Interaction equation (AISC H1): correct

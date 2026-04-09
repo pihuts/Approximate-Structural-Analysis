@@ -1,0 +1,41 @@
+__pycache__/
+*.pyc
+.idea/
+.history/
+.ipynb_checkpoints/
+.lh/
+*.npy
+*.exe
+.venv/
+venv/
+node_modules/
+.env
+.env.local
+.env.development
+dist/
+build/
+.DS_Store
+Thumbs.db
+
+# Historical analysis data (not needed to run)
+Hl/
+Ivan/
+Jenny/
+Pihuts/
+Pihuts1/
+Pihuts_darkseagreen/
+Pihuts_khaki/
+Pihuts_sandybrown/
+kerl/
+
+# Jupyter notebooks (use the Julia-based analysis)
+*.ipynb
+Untitled.ipynb
+staad_python.ipynb
+
+# Claude Code settings (personal)
+.claude/
+
+# Keep these specific needed files
+!requirements.txt
+!data/w_sections.csv
