@@ -1,0 +1,6 @@
+[deps]
+Unitful = "1986cc42-f94f-5a68-af5c-568840ba703d"
+Latexify = "23fbe1c7-10f8-510f-bbea-8f1be824d403"
+Handcalcs = "e8a07092-c156-4455-ab8e-ed8bc81edefb"
+UnitfulLatexify = "45397f5d-5981-4be9-9bfd-cae5c9e3ad20"
+JSON = "682c06a0-de6a-54ab-a142-c8b1cf79cde6"
