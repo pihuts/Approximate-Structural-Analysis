@@ -167,11 +167,10 @@ All calculations use SI units internally:
 ## Reference Data
 The `data/` directory contains AISC W-section properties in CSV format.
 
-## Formula Verification
-All structural formulas have been verified against AISC 360 specifications:
-- Portal method shear distribution: correct
-- 0.8L clear span beam approximation: standard
-- AISC compact section limits (bf/2tf, d/tw): correct
-- Column K-factor alignment chart: correct
-- Euler column formula with AISC F_s factor: correct
-- Interaction equation (AISC H1): correct
+## Calculation scope and validation status
+
+This is an independent engineering-software implementation of approximate portal-frame and gravity-load methods, with steel-member design checks. The visible diagrams and rendered equations make the calculation path inspectable.
+
+The repository does not currently provide a published independent benchmark suite or a passing CI calculation-validation report. The previous blanket statement that every formula was verified against AISC 360 overstated the public evidence. Approximate analysis assumptions and a particular code edition must be checked for each intended use; screenshots alone do not validate the numerical results.
+
+Start with the default example above to inspect inputs, units, intermediate results and diagrams. A documented comparison against independently solved reference cases remains the next validation step.
